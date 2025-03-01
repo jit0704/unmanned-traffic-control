@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>단속현황</title>
+    <link rel="stylesheet" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <span class="left">
+          <img src="/base/images/logo.png" alt="logo" />
+          <h1>무인교통단속장비 센터</h1>
+        </span>
+        <span class="right">
+          <em class="user">알티솔루션님</em>
+          <button type="button">로그아웃</button>
+        </span>
+      </header>
+      <main class="main-container">
+        <nav>
+          <a href="#" class="btn-crackdown active">단속현황</a>
+          <a href="#" class="btn-stats">통계</a>
+        </nav>
+        <section class="main-content crackdown">
+          <aside>
+            <h2>정보 검색</h2>
+            <table class="search-box">
+              <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 70%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><span>· 지점 구분</span></th>
+                  <td>
+                    <select class="selectbox">
+                      <option value="">전체</option>
+                      <option value="">지점명1</option>
+                      <option value="">지점명2</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th><span>· 시작 날짜</span></th>
+                  <td><input type="date" class="datebox" /></td>
+                </tr>
+                <tr>
+                  <th><span>· 종료 날짜</span></th>
+                  <td><input type="date" class="datebox" /></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>검색 결과 목록</h2>
+            <div class="search-list">
+              <button type="button" class="active">
+                <div class="inner">
+                  <em>서울특별시 중구 세종대로 110</em>
+                  <span class="info">
+                    <i>속도위반</i>
+                    <time>2025-02-01 15:40:00</time>
+                  </span>
+                </div>
+              </button>
+              <button type="button">
+                <div class="inner">
+                  <em>서울특별시 중구 세종대로 110</em>
+                  <span class="info">
+                    <i>속도위반</i>
+                    <time>2025-02-01 15:40:00</time>
+                  </span>
+                </div>
+              </button>
+              <button type="button">
+                <div class="inner">
+                  <em>서울특별시 중구 세종대로 110</em>
+                  <span class="info">
+                    <i>속도위반</i>
+                    <time>2025-02-01 15:40:00</time>
+                  </span>
+                </div>
+              </button>
+            </div>
+            <!-- //search-list -->
+          </aside>
+          <article>
+            <h2>지점명</h2>
+            <div class="crackdown-photo-container">
+              <div class="enlarge-container-left">
+                <div class="enlarge-photo">
+                  <img src="https://placehold.co/1000x1000" alt="" />
+                </div>
+                <!-- //enlarge-photo -->
+              </div>
+              <!-- //enlarge-container -->
+              <div class="enlarge-container-right">
+                <ul class="thumnail-list">
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
+                  </li>
+                </ul>
+                <!-- //thumnail-container -->
+                <div class="license-plate">
+                  <img src="https://placehold.co/1000x1000" alt="" />
+                </div>
+                <!-- //license-plate -->
+              </div>
+            </div>
+            <!-- //crackdown-photo-container -->
+            <table class="crackdown-info-container">
+              <colgroup>
+                <col style="width: 15%" />
+                <col style="width: 35%" />
+                <col style="width: 15%" />
+                <col style="width: 35%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>위반 날짜</th>
+                  <td>2025-02-15</td>
+                  <th>위반 시간</th>
+                  <td>15:04:22</td>
+                </tr>
+                <tr>
+                  <th>위반 종류</th>
+                  <td>속도 위반</td>
+                  <th>위반 차로</th>
+                  <td>1차로</td>
+                </tr>
+                <tr>
+                  <th>위반 속도</th>
+                  <td>80.56 km/h</td>
+                  <th>도로 속도</th>
+                  <td>70 km/h</td>
+                </tr>
+                <tr>
+                  <th>차량 종류</th>
+                  <td>승용차</td>
+                  <th>번호판</th>
+                  <td>111하1234</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+      <!-- //main-container -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // input date 날짜 value값 초기 설정
+      const dateBox = document.querySelectorAll('.datebox');
+      dateBox.forEach((val) => {
+        val.value = new Date().toISOString().substring(0, 10);
+      });
+    </script>
+  </body>
+</html>
