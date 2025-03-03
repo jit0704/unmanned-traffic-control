@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>단속현황</title>
     <link rel="stylesheet" href="/base/css/style.css" />
+    <script src="/base/js/ui.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -22,6 +23,26 @@
         <nav>
           <a href="main.html" class="btn-crackdown active">단속현황</a>
           <a href="main2.html" class="btn-stats">통계</a>
+          <div class="lang-dropdown-container">
+            <button type="button" id="lang-button">
+              <img src="/base/images/lang_es.png" alt="스페인어" id="lang-image" />
+              <span id="lang-text">스페인어</span>
+            </button>
+            <div class="dropdown-list">
+              <a href="#" data-lang="스페인어" data-img="/base/images/lang_es.png">
+                <img src="/base/images/lang_es.png" alt="스페인어" />
+                <span>스페인어</span>
+              </a>
+              <a href="#" data-lang="영어" data-img="/base/images/lang_usa.png">
+                <img src="/base/images/lang_usa.png" alt="영어" />
+                <span>영어</span>
+              </a>
+              <a href="#" data-lang="한글" data-img="/base/images/lang_kor.png">
+                <img src="/base/images/lang_kor.png" alt="한글" />
+                <span>한글</span>
+              </a>
+            </div>
+          </div>
         </nav>
         <section class="main-content crackdown">
           <aside>
@@ -172,13 +193,5 @@
       <!-- //main-container -->
     </div>
     <!-- //wrapper -->
-
-    <script>
-      // input date 날짜 value값 초기 설정
-      const dateBox = document.querySelectorAll('.datebox');
-      dateBox.forEach((val) => {
-        val.value = new Date().toISOString().substring(0, 10);
-      });
-    </script>
   </body>
 </html>

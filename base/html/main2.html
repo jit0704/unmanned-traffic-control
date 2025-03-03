@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>통계</title>
+    <link rel="stylesheet" href="/base/css/style.css" />
+    <script src="/base/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <span class="left">
+          <img src="/base/images/logo.png" alt="logo" />
+          <h1>무인교통단속장비 센터</h1>
+        </span>
+        <span class="right">
+          <em class="user">알티솔루션님</em>
+          <button type="button">로그아웃</button>
+        </span>
+      </header>
+      <main class="main-container">
+        <nav>
+          <a href="main.html" class="btn-crackdown">단속현황</a>
+          <a href="main2.html" class="btn-stats active">통계</a>
+          <div class="lang-dropdown-container">
+            <button type="button" id="lang-button">
+              <img src="/base/images/lang_es.png" alt="스페인어" id="lang-image" />
+              <span id="lang-text">스페인어</span>
+            </button>
+            <div class="dropdown-list">
+              <a href="#" data-lang="스페인어" data-img="/base/images/lang_es.png">
+                <img src="/base/images/lang_es.png" alt="스페인어" />
+                <span>스페인어</span>
+              </a>
+              <a href="#" data-lang="영어" data-img="/base/images/lang_usa.png">
+                <img src="/base/images/lang_usa.png" alt="영어" />
+                <span>영어</span>
+              </a>
+              <a href="#" data-lang="한글" data-img="/base/images/lang_kor.png">
+                <img src="/base/images/lang_kor.png" alt="한글" />
+                <span>한글</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <section class="main-content statistics">
+          <hgroup class="filter-container">
+            <em>지점 명</em>
+            <select class="selectbox" style="width: 186px">
+              <option value="">지점 1번</option>
+              <option value="">지점 2번</option>
+              <option value="">지점 3번</option>
+            </select>
+            <select class="selectbox" style="width: 146px">
+              <option value="">일별</option>
+              <option value="">아이템</option>
+            </select>
+            <input type="date" class="datebox" />
+            <input type="date" class="datebox" />
+            <button type="button" class="btn-primary">검색</button>
+          </hgroup>
+          <main>
+            <aside>
+              <div>
+                <span class="tit">총 단속량</span>
+                <em>105,700 건</em>
+              </div>
+              <div>
+                <span class="tit">평균 위반 속도</span>
+                <em>34,55 Km/h</em>
+              </div>
+            </aside>
+            <article>
+              <div class="chart-container">
+                <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+              </div>
+              <div class="chart-container">
+                <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+              </div>
+            </article>
+          </main>
+        </section>
+      </main>
+      <!-- //main-container -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
