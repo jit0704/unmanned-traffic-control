@@ -125,55 +125,55 @@ section {
   font-family: "Pretendard";
   font-weight: 900;
   font-display: fallback;
-  src: local("Pretendard Black"), url("/base/font/Pretendard-Black.woff2") format("woff2");
+  src: local("Pretendard Black"), url("/font/Pretendard-Black.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: fallback;
-  src: local("Pretendard ExtraBold"), url("/base/font/Pretendard-ExtraBold.woff2");
+  src: local("Pretendard ExtraBold"), url("/font/Pretendard-ExtraBold.woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: fallback;
-  src: local("Pretendard Bold"), url("/base/font/Pretendard-Bold.woff2") format("woff2");
+  src: local("Pretendard Bold"), url("/font/Pretendard-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: fallback;
-  src: local("Pretendard SemiBold"), url("/base/font/Pretendard-SemiBold.woff2") format("woff2");
+  src: local("Pretendard SemiBold"), url("/font/Pretendard-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: fallback;
-  src: local("Pretendard Medium"), url("/base/font/Pretendard-Medium.woff2") format("woff2");
+  src: local("Pretendard Medium"), url("/font/Pretendard-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: fallback;
-  src: local("Pretendard Regular"), url("/base/font/Pretendard-Regular.woff2") format("woff2");
+  src: local("Pretendard Regular"), url("/font/Pretendard-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: fallback;
-  src: local("Pretendard Light"), url("/base/font/Pretendard-Light.woff2") format("woff2");
+  src: local("Pretendard Light"), url("/font/Pretendard-Light.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: fallback;
-  src: local("Pretendard ExtraLight"), url("/base/font/Pretendard-ExtraLight.woff2") format("woff2");
+  src: local("Pretendard ExtraLight"), url("/font/Pretendard-ExtraLight.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: fallback;
-  src: local("Pretendard Thin"), url("/base/font/Pretendard-Thin.woff2") format("woff2");
+  src: local("Pretendard Thin"), url("/font/Pretendard-Thin.woff2") format("woff2");
 }
 /*---------------------------------------------------------------
   [help class]
@@ -211,7 +211,7 @@ section {
   display: block;
   width: 100%;
   height: 170px;
-  background-image: url("/base/images/login_bg.png");
+  background-image: url("/images/login_bg.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -253,13 +253,13 @@ section {
   color: #a6a6a6;
 }
 .login-container .email::before {
-  background: url(/base/images/icon_mail.png) no-repeat 0 0;
+  background: url(/images/icon_mail.png) no-repeat 0 0;
 }
 .login-container .pwd {
   margin-top: 14px;
 }
 .login-container .pwd::before {
-  background: url(/base/images/icon_lock.png) no-repeat 0 0;
+  background: url(/images/icon_lock.png) no-repeat 0 0;
 }
 
 .btn-login {
@@ -296,7 +296,7 @@ section {
   border: 1px solid #dfe3e8;
   font-size: 14px;
   color: #737c86;
-  background: url(/base/images/icon-arrow-down.png) no-repeat calc(100% - 12px) 50%;
+  background: url(/images/icon-arrow-down.png) no-repeat calc(100% - 12px) 50%;
   background-size: 24px;
 }
 
@@ -359,7 +359,7 @@ input.datebox {
   content: "";
   width: 18px;
   height: 18px;
-  background-image: url("/base/images/icon_user.png");
+  background-image: url("/images/icon_user.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -400,7 +400,7 @@ input.datebox {
 .main-container > nav .btn-crackdown::before {
   width: 20px;
   height: 20px;
-  background-image: url("/base/images/menu1.png");
+  background-image: url("/images/menu1.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -410,12 +410,12 @@ input.datebox {
   background: #1f325b;
 }
 .main-container > nav .btn-crackdown.active::before {
-  background-image: url(/base/images/menu1_active.png);
+  background-image: url(/images/menu1_active.png);
 }
 .main-container > nav .btn-stats::before {
   width: 20px;
   height: 20px;
-  background-image: url("/base/images/menu2.png");
+  background-image: url("/images/menu2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -425,7 +425,7 @@ input.datebox {
   background: #1f325b;
 }
 .main-container > nav .btn-stats.active::before {
-  background-image: url(/base/images/menu2_active.png);
+  background-image: url(/images/menu2_active.png);
 }
 .main-container > nav .lang-dropdown-container {
   position: absolute;
