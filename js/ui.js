@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   /**
    * input date 날짜 value값 초기 설정
+   * 250314: 자정으로 넘어가면 날짜가 자동으로 안바뀌는 현상 수정
+   * 참고: https://anywaydevlog.tistory.com/46
    */
   const dateBox = document.querySelectorAll('.datebox');
   dateBox.forEach((val) => {
-    val.value = new Date().toISOString().substring(0, 10);
+    const offset = new Date().getTimezoneOffset() * 60000;
+    const dateOffset = new Date(new Date().getTime() - offset);
+    val.value = dateOffset.toISOString().substring(0, 10);
   });
 
   /**
