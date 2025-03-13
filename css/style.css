@@ -310,6 +310,70 @@ input.datebox {
   color: #737c86;
 }
 
+.btn-search {
+  width: 26px;
+  height: 26px;
+  background-image: url("/images/icon_search.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #f6f6f6;
+}
+.btn-excel-down {
+  width: 26px;
+  height: 26px;
+  background-image: url("/images/icon_excel.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #f6f6f6;
+}
+
+.paging-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 6px;
+}
+.paging-container button {
+  font-size: 16px;
+  color: #212b36;
+  font-weight: 500;
+  text-align: center;
+}
+.paging-container > button {
+  width: 24px;
+  height: 24px;
+}
+.paging-container > button:disabled {
+  color: #a6a6a6;
+}
+.paging-container .num-bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 6px;
+}
+.paging-container .num-bind button {
+  min-width: 32px;
+  padding: 0 8px;
+  line-height: 32px;
+  border-radius: 8px;
+}
+.paging-container .num-bind button.active {
+  background: rgba(145, 158, 171, 0.16);
+}
+
 .wrapper > .header {
   display: flex;
   flex-direction: row;
@@ -377,6 +441,7 @@ input.datebox {
   width: 110px;
   padding: 20px 10px 0;
   border-right: 1px solid #dfe3e8;
+  box-shadow: 5px 4px 40px 0px rgba(0, 0, 0, 0.05), inset 0px -11px 8px -8px #333;
 }
 .main-container > nav > a {
   display: block;
@@ -429,11 +494,11 @@ input.datebox {
 }
 .main-container > nav .lang-dropdown-container {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 8px 6px;
-  background: #e0e0e0;
+  bottom: 12px;
+  left: 5px;
+  width: 99px;
+  border-radius: 6px;
+  border: 1px solid #dfe3e8;
 }
 .main-container > nav .lang-dropdown-container img {
   width: 28px;
@@ -445,7 +510,7 @@ input.datebox {
   justify-content: center;
   align-items: center;
   gap: 0 13px;
-  height: 34px;
+  height: 32px;
   font-size: 12px;
   color: #737c86;
   border-radius: 6px;
@@ -488,14 +553,30 @@ input.datebox {
   width: 330px;
   padding: 15px 30px;
   border-right: 1px solid #dfe3e8;
-  box-shadow: 5px 4px 40px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 4px 40px 0px rgba(0, 0, 0, 0.05), inset 0px -11px 8px -8px #333;
+}
+.main-content > aside .search-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a6a6a6;
+}
+.main-content > aside .search-title .bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 8px;
 }
 .main-content > aside h2 {
   line-height: 42px;
   font-size: 16px;
   font-weight: 700;
   color: #737c86;
-  border-bottom: 1px solid #a6a6a6;
+}
+.main-content > aside .paging-container {
+  margin: 0 -17px 0;
 }
 .main-content > article {
   flex: 1;
@@ -523,7 +604,8 @@ input.datebox {
 }
 .search-list {
   overflow: auto;
-  height: calc(100vh - 342px);
+  height: calc(100vh - 367px);
+  padding-bottom: 16px;
 }
 .search-list .inner {
   margin: 16px 0;
@@ -593,7 +675,6 @@ input.datebox {
 .crackdown-photo-container img {
   width: 100%;
   display: block;
-  object-fit: cover;
 }
 
 .enlarge-container-left {
@@ -637,6 +718,7 @@ input.datebox {
 .enlarge-container-right .license-plate img {
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .crackdown-info-container {
@@ -677,21 +759,15 @@ input.datebox {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 290px 0;
 }
 .statistics main aside > div {
   flex: 1;
   width: 100%;
   text-align: center;
+  align-content: center;
 }
-.statistics main aside > div:first-child {
-  align-content: flex-end;
-}
-.statistics main aside > div:first-child em {
+.statistics main aside > div em {
   background: #d0dfff;
-}
-.statistics main aside > div:last-child em {
-  background: #ffedd5;
 }
 .statistics main aside > div .tit {
   display: block;
