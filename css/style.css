@@ -714,8 +714,10 @@ input.datebox {
 }
 .enlarge-container-right .thumnail-list li {
   flex: 1 0 32%;
+  font-size: 0;
 }
 .enlarge-container-right .thumnail-list li.data-img-none {
+  min-height: 211px;
   background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
   background-size: contain;
 }
