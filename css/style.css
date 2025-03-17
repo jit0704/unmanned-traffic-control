@@ -690,6 +690,12 @@ input.datebox {
   height: 100%;
   border-radius: 10px;
 }
+.enlarge-container-left .enlarge-photo.data-img-none {
+  background: url(/images/img_default.png) no-repeat 50% 50%;
+}
+.enlarge-container-left .enlarge-photo.data-img-none img {
+  display: none;
+}
 .enlarge-container-right {
   flex: 1;
 }
@@ -709,6 +715,13 @@ input.datebox {
 .enlarge-container-right .thumnail-list li {
   flex: 1 0 32%;
 }
+.enlarge-container-right .thumnail-list li.data-img-none {
+  background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
+  background-size: contain;
+}
+.enlarge-container-right .thumnail-list li.data-img-none button {
+  display: none;
+}
 .enlarge-container-right .license-plate {
   height: 97px;
   margin-top: 16px;
@@ -719,6 +732,13 @@ input.datebox {
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
+}
+.enlarge-container-right .license-plate.data-img-none {
+  background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
+  background-size: 35%;
+}
+.enlarge-container-right .license-plate.data-img-none img {
+  display: none;
 }
 
 .crackdown-info-container {
@@ -734,7 +754,9 @@ input.datebox {
   border-right: 1px solid #dfe3e8;
 }
 .crackdown-info-container td {
-  padding: 18px 20px;
+  height: 56px;
+  padding: 0 20px;
+  vertical-align: middle;
   text-align: center;
   border-bottom: 1px solid #dfe3e8;
 }
@@ -822,4 +844,12 @@ input.datebox {
 }
 .chart-container:not(:first-child) {
   margin-top: 51px;
+}
+
+/*---------------------------------------------------------------
+  [다국어 설정 style]
+-----------------------------------------------------------------*/
+/* 영어 */
+.search-box:lang(en) th span {
+  letter-spacing: -1px;
 }
