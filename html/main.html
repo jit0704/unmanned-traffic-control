@@ -130,48 +130,85 @@
               <div class="enlarge-container-left">
                 <!-- 250317: 디폴트 이미지 노출시 data-img-none 클래스명 추가 -->
                 <div class="enlarge-photo data-img-none">
-                  <img src="https://placehold.co/1000x1000" alt="" />
+                  <button type="button">
+                    <img src="https://placehold.co/1000x1000" alt="" />
+                  </button>
                 </div>
                 <!-- //enlarge-photo -->
-              </div>
-              <!-- //enlarge-container -->
-              <div class="enlarge-container-right">
-                <ul class="thumnail-list">
-                  <!-- 250317: 디폴트 이미지 노출시 data-img-none 클래스명 추가 -->
-                  <li class="data-img-none">
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/1000x1000" alt="" /></button>
-                  </li>
-                </ul>
-                <!-- //thumnail-container -->
-                <!-- 250317: 디폴트 이미지 노출시 data-img-none 클래스명 추가 -->
+
                 <div class="license-plate data-img-none">
                   <img src="https://placehold.co/1000x1000" alt="" />
                 </div>
                 <!-- //license-plate -->
+              </div>
+              <!-- //enlarge-container -->
+              <div class="enlarge-container-right">
+                <header>
+                  <em class="tit">증거</em>
+                  <span class="bind">
+                    <button type="button" class="btn-play"><span class="screen-out">재생 버튼</span></button>
+                    <button type="button" class="btn-down"><span class="screen-out">다운 버튼</span></button>
+                  </span>
+                </header>
+                <ul class="thumnail-list">
+                  <!-- 250317: 디폴트 이미지 노출시 data-img-none 클래스명 추가 -->
+                  <li class="data-img-none">
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                </ul>
+
+                <header class="mt-18">
+                  <em class="tit">신호</em>
+                </header>
+                <!-- //thumnail-container -->
+                <ul class="thumnail-list type2">
+                  <li class="data-img-none">
+                    <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
+                  </li>
+                </ul>
+                <!-- //thumnail-container -->
               </div>
             </div>
             <!-- //crackdown-photo-container -->
@@ -215,5 +252,19 @@
       <!-- //main-container -->
     </div>
     <!-- //wrapper -->
+
+    <!-- 모달 팝업 .modal-wrapper에 active 클래스 추가시 노출 -->
+    <div class="modal-wrapper">
+      <div class="modal-container">
+        <header class="modal-head">
+          <em>[지점명][신호위반/속도위반] 2025-02-01 15:40:00.000</em>
+          <button type="button" class="btn-close"><span class="screen-out">모달팝업 닫기</span></button>
+        </header>
+        <div class="modal-body">
+          <img src="https://placehold.co/1280x750" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- //modal-wrapper -->
   </body>
 </html>
