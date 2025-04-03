@@ -737,6 +737,9 @@ input.datebox {
   border-radius: 10px;
   border: 1px solid #e0e0e0;
 }
+.enlarge-container-left .license-plate button {
+  height: 100%;
+}
 .enlarge-container-left .license-plate img {
   height: 100%;
   border-radius: 10px;
@@ -746,6 +749,7 @@ input.datebox {
   background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
   background-size: 35%;
 }
+.enlarge-container-left .license-plate.data-img-none button,
 .enlarge-container-left .license-plate.data-img-none img {
   display: none;
 }
