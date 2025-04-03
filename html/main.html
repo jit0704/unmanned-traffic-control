@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>단속현황</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" />
+    <script src="/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/js/lib/jquery-ui.min.js"></script>
     <script src="/js/ui.js"></script>
   </head>
   <body>
@@ -151,7 +154,7 @@
                   </span>
                 </header>
                 <ul class="thumnail-list">
-                  <!-- 250317: 디폴트 이미지 노출시 data-img-none 클래스명 추가 -->
+                  <!-- <li class="data-none">증거 사진 없음</li> -->
                   <li class="data-img-none">
                     <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
                   </li>
@@ -195,6 +198,7 @@
                 </header>
                 <!-- //thumnail-container -->
                 <ul class="thumnail-list type2">
+                  <!-- <li class="data-none">신호 사진 없음</li> -->
                   <li class="data-img-none">
                     <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
                   </li>
@@ -254,7 +258,7 @@
     <!-- //wrapper -->
 
     <!-- 모달 팝업 .modal-wrapper에 active 클래스 추가시 노출 -->
-    <div class="modal-wrapper">
+    <div class="modal-wrapper active">
       <div class="modal-container">
         <header class="modal-head">
           <em>[지점명][신호위반/속도위반] 2025-02-01 15:40:00.000</em>
@@ -266,5 +270,28 @@
       </div>
     </div>
     <!-- //modal-wrapper -->
+
+    <script>
+      // 모달 팝업 리사이징 이벤트 기능
+      $('.modal-container').resizable({
+        maxWidth: 1280,
+        maxHeight: 800,
+        minWidth: 640,
+        minHeight: 400,
+      });
+
+      // 모달 팝업 드래그 이벤트 기능
+      $('.modal-container').draggable({
+        handle: '.modal-head',
+        containment: '.modal-wrapper',
+        scroll: false,
+        drag: function () {
+          const $this = $(this);
+          $this.css({
+            transform: 'translate(-50%, -50%)',
+          });
+        },
+      });
+    </script>
   </body>
 </html>
