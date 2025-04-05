@@ -671,8 +671,10 @@ input.datebox {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0 5px;
   margin-top: 19px;
   line-height: 21px;
+  letter-spacing: -0.5px;
 }
 .search-list button .info i {
   flex: 1;
