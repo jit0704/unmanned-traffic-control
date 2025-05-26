@@ -465,7 +465,7 @@ input.datebox {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 92px);
 }
 .main-container > nav {
   position: relative;
@@ -635,7 +635,7 @@ input.datebox {
 }
 .search-list {
   overflow: auto;
-  height: calc(100vh - 426px);
+  height: calc(100vh - 448px);
   margin-bottom: 16px;
 }
 .search-list .inner {
@@ -850,7 +850,7 @@ input.datebox {
   border-right: 1px solid #dfe3e8;
 }
 .crackdown-info-container td {
-  height: 56px;
+  height: 47px;
   padding: 0 20px;
   vertical-align: middle;
   text-align: center;
