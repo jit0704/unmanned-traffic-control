@@ -1,0 +1,90 @@
+/*---------------------------------------------------------------
+  [로그인]
+-----------------------------------------------------------------*/
+.login {
+  &-wrapper {
+    @include flexbox(row, center, center);
+    width: 100%;
+    height: 100vh;
+
+    main {
+      position: relative;
+      width: 380px;
+      padding: 20px 30px 43px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.25);
+
+      &::before {
+        content: '';
+        display: block;
+        @include bgurl(100%, 170px, 'login_bg.png');
+        filter: grayscale(1);
+      }
+
+      h1 {
+        position: absolute;
+        top: 74px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-container {
+    margin-top: 34px;
+
+    & > span {
+      @include flexbox(row, flex-start, center);
+      gap: 0 10px;
+      padding: 13px 16px 10px;
+      border-radius: 5px;
+      border: 1px solid #e0e0e0;
+
+      &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+      }
+
+      input {
+        width: 100%;
+        height: 25px;
+        border: 0;
+        outline: 0;
+        color: #454f5b;
+        font-size: 14px;
+
+        &::placeholder {
+          color: #a6a6a6;
+        }
+      }
+    }
+
+    .email {
+      &::before {
+        background: url(/images/icon_mail.png) no-repeat 0 0;
+      }
+    }
+
+    .pwd {
+      margin-top: 14px;
+
+      &::before {
+        background: url(/images/icon_lock.png) no-repeat 0 0;
+      }
+    }
+  }
+}
+
+.btn-login {
+  display: block;
+  width: 100%;
+  margin-top: 29px;
+  line-height: 54px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  background: #1f325b;
+  box-shadow: 0px 5px 20px 0px rgba(31, 50, 91, 0.25);
+}

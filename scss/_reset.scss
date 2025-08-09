@@ -1,0 +1,262 @@
+/*---------------------------------------------------------------
+  [Reset]
+-----------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color: #454f5b;
+}
+
+body {
+  min-width: 1920px;
+  // overflow-x: auto;
+  font-family: $font-name;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-name;
+  margin: 0;
+  line-height: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+span,
+time,
+em,
+i {
+  display: inline-block;
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tbody {
+    vertical-align: top;
+  }
+}
+
+// img {
+//   width: 100%;
+// }
+
+button {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-align: left;
+  font-family: $font-name;
+  background: transparent;
+  cursor: pointer;
+}
+
+select {
+  outline: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+// textarea {
+//   width: 100%;
+//   padding: 1rem;
+//   border: 1px solid $c-gray5;
+//   border-radius: 0.5rem;
+//   font-size: 1.8rem;
+//   color: $c-gray2;
+//   outline: 0;
+//   resize: none;
+// }
+
+label {
+  cursor: pointer;
+}
+
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-name;
+}
+
+input[type='date'] {
+  border: 0;
+  outline: 0;
+}
+
+video {
+  object-fit: fill;
+}
+
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 스크롤바 커스텀 */
+// body {
+//   ::-webkit-scrollbar-thumb {
+//     border-radius: 0.5rem;
+//     background: $c-gray4;
+//   }
+
+//   ::-webkit-scrollbar-track {
+//     background: none;
+//   }
+// }
+
+/* 웹폰트 Pretendard */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 900;
+  font-display: fallback;
+  src: local('Pretendard Black'), url('/font/Pretendard-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 800;
+  font-display: fallback;
+  src: local('Pretendard ExtraBold'), url('/font/Pretendard-ExtraBold.woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: fallback;
+  src: local('Pretendard Bold'), url('/font/Pretendard-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: fallback;
+  src: local('Pretendard SemiBold'), url('/font/Pretendard-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-display: fallback;
+  src: local('Pretendard Medium'), url('/font/Pretendard-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Pretendard Regular'), url('/font/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 300;
+  font-display: fallback;
+  src: local('Pretendard Light'), url('/font/Pretendard-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  font-display: fallback;
+  src: local('Pretendard ExtraLight'), url('/font/Pretendard-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-display: fallback;
+  src: local('Pretendard Thin'), url('/font/Pretendard-Thin.woff2') format('woff2');
+}
+
+/*---------------------------------------------------------------
+  [help class]
+-----------------------------------------------------------------*/
+.screen-out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.ov-hide {
+  overflow: hidden;
+}
+
+// .txt-center {
+//   text-align: center !important;
+// }
+
+// .txt-left {
+//   text-align: left !important;
+// }
+
+// .ml {
+//   &-0 {
+//     margin-left: 0 !important;
+//   }
+// }
+
+// .pdl {
+//   &-15 {
+//     padding-left: 1.5rem !important;
+//   }
+// }
+
+// .pdr {
+//   &-15 {
+//     padding-right: 1.5rem !important;
+//   }
+
+//   &-20 {
+//     padding-right: 2rem !important;
+//   }
+// }
+
+// .border-bot0 {
+//   border-bottom: 0 !important;
+// }

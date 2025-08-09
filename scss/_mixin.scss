@@ -1,0 +1,65 @@
+// style mixin
+@mixin global-layout-style {
+  width: 100%;
+  height: calc(99.9vh - 20px);
+  margin-left: 5.4rem;
+}
+
+@mixin hidden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+@mixin posSticky($top-num) {
+  position: sticky;
+  top: $top-num;
+  z-index: 1;
+}
+
+// 유틸 mixin
+@mixin font-style($num) {
+  font-weight: $num;
+}
+
+@mixin dotdot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+@mixin flexbox($direction: row, $justi-con: flex-start, $align-item: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justi-con;
+  align-items: $align-item;
+}
+
+@mixin bgurl($w, $h, $img, $bg-pos: 0 0, $bg-size: contain) {
+  width: $w;
+  height: $h;
+  background-image: url('/images/#{$img}');
+  background-repeat: no-repeat;
+  background-position: $bg-pos;
+  background-size: $bg-size;
+}
+
+@mixin icon($w, $h, $img, $bg-pos: 0 0, $bg-size: contain) {
+  content: '';
+  display: block;
+  width: $w;
+  height: $h;
+  background-image: url('/images/#{$img}');
+  background-repeat: no-repeat;
+  background-position: $bg-pos;
+  background-size: $bg-size;
+}
+
+// variable
+$font-name: Pretendard, Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$primaryHeight: calc(99.9vh - 20px);
+$color-rgba-black0-point2: rgba(0, 0, 0, 0.2);

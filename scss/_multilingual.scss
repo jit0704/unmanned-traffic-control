@@ -1,0 +1,28 @@
+/*---------------------------------------------------------------
+  [다국어 설정 style]
+-----------------------------------------------------------------*/
+
+/* 영어 */
+.search-box:lang(en) {
+  th {
+    span {
+      letter-spacing: -1px;
+    }
+  }
+}
+
+footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: right;
+  background: rgb(221, 222, 223);
+  margin-top: 2px;
+}
+footer {
+  .copylight {
+    padding-right: 12px;
+    line-height: 20px;
+    font-size: 10px;
+    color: rgb(76, 76, 76);
+  }
+}
