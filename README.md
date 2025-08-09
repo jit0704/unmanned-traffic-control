@@ -9,3 +9,10 @@ $ git clone https://github.com/jit0704/unmanned-traffic-control.git
 ```
 
 또는 우측 상단 Code버튼 눌러서 zip파일 다운 받으면 됩니다.
+
+## 퍼블리싱 링크
+
+<a href="https://glittering-basbousa-bfe7af.netlify.app/html/login" target="_blank">로그인</a>
+<a href="https://glittering-basbousa-bfe7af.netlify.app/html/main" target="_blank">단속현황 메인</a>
+<a href="https://glittering-basbousa-bfe7af.netlify.app/html/main2" target="_blank">통계 메인</a>
+<a href="https://glittering-basbousa-bfe7af.netlify.app/html/main_spain_ver" target="_blank">단속현황 스페인 언어 버전</a>
