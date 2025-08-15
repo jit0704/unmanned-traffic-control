@@ -18,14 +18,50 @@
           <h1>무인교통단속장비 센터</h1>
         </span>
         <span class="right">
+          <!-- active 클래스 추가시 알람 버튼 활성화 -->
+          <button type="button" class="alarm-bell"><i class="screen-out">알람 버튼</i></button>
           <em class="user">알티솔루션님</em>
-          <button type="button">로그아웃</button>
+          <button type="button" class="btn-logout">로그아웃</button>
+
+          <!-- 알람 팝업 -->
+          <div class="layer-alert type02">
+            <div class="layer-alert__header">
+              <div class="title">알림</div>
+            </div>
+            <div class="alarm-list-wrap">
+              <ul class="alarm-list">
+                <li>
+                  <div class="alarm-triangle-wrap">
+                    <div class="alarm-triangle"></div>
+                  </div>
+                  <div class="alarm-detail">
+                    <span class="alarm-kind">신호 이상</span>
+                    <span class="alarm-date">2025-07-01 11:00:00</span>
+                    <p>지점 명 : ~~~~~~~~~~~~~~~~~~~~</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="alarm-triangle-wrap">
+                    <div class="alarm-triangle"></div>
+                  </div>
+                  <div class="alarm-detail">
+                    <span class="alarm-kind">신호 이상</span>
+                    <span class="alarm-date">2025-07-01 11:00:00</span>
+                    <p>지점 명 : ~~~~~~~~~~~~~~~~~~~~</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- //layer-alert -->
         </span>
       </header>
       <main class="main-container">
         <nav>
           <a href="main.html" class="btn-crackdown active">단속현황</a>
           <a href="main2.html" class="btn-stats">통계</a>
+          <a href="violation.html" class="btn-stats violate">위반위력</a>
+          <a href="setting1.html" class="btn-stats setting">설정</a>
           <div class="lang-dropdown-container">
             <button type="button" id="lang-button">
               <img src="/images/lang_es.png" alt="스페인어" id="lang-image" />
@@ -230,35 +266,53 @@
             <!-- //crackdown-photo-container -->
             <table class="crackdown-info-container">
               <colgroup>
-                <col style="width: 15%" />
-                <col style="width: 35%" />
-                <col style="width: 15%" />
-                <col style="width: 35%" />
+                <col style="width: 200px" />
+                <col />
+                <col style="width: 200px" />
+                <col />
+                <col style="width: 200px" />
+                <col />
               </colgroup>
               <tbody>
                 <tr>
-                  <th>위반 날짜</th>
-                  <td>2025-02-15</td>
-                  <th>위반 시간</th>
-                  <td>15:04:22</td>
-                </tr>
-                <tr>
-                  <th>위반 종류</th>
+                  <th>차량 번호</th>
+                  <td>111하 1234</td>
+                  <th>위반 유형</th>
                   <td>속도 위반</td>
-                  <th>위반 차로</th>
-                  <td>1차로</td>
-                </tr>
-                <tr>
-                  <th>위반 속도</th>
-                  <td>80.56 km/h</td>
-                  <th>도로 속도</th>
-                  <td>70 km/h</td>
-                </tr>
-                <tr>
                   <th>차량 종류</th>
                   <td>승용차</td>
-                  <th>번호판</th>
-                  <td>111하1234</td>
+                </tr>
+                <tr>
+                  <th>위반 일시</th>
+                  <td>2025-02-01 15:40:00</td>
+                  <th>위반 차로</th>
+                  <td>1차로</td>
+                  <th>정지 통과</th>
+                  <td>1.045</td>
+                </tr>
+                <tr>
+                  <th>수신 일시</th>
+                  <td>2025-02-01 15:41:00</td>
+                  <th>신호 상태</th>
+                  <td>적색</td>
+                  <th>교차 통과</th>
+                  <td>3.541</td>
+                </tr>
+                <tr>
+                  <th>제한 속도</th>
+                  <td>70 km/h</td>
+                  <th>단속 속도</th>
+                  <td>80 km/h</td>
+                  <th>실 주행 속도</th>
+                  <td>80.48 km/h</td>
+                </tr>
+                <tr>
+                  <th>구역</th>
+                  <td>La Victoria</td>
+                  <th>지점 명</th>
+                  <td>Loacation 2</td>
+                  <th>처리 상태</th>
+                  <td><span class="c-state">위반</span> / 취소</td>
                 </tr>
               </tbody>
             </table>
@@ -285,6 +339,26 @@
       </div>
     </div>
     <!-- //modal-wrapper -->
+
+    <div class="layer-alert center">
+      <div class="layer-alert__header">
+        <div class="title">알림</div>
+        <button>닫힘</button>
+      </div>
+      <div class="layer-alert__content">
+        <div class="alert-triangle"></div>
+        <div>
+          <span>지점 명: ~~~~~~~~</span>
+          <p>
+            신호 상태 이상이 감지되었습니다.<br />
+            해당 위치 점검 바랍니다.
+          </p>
+        </div>
+      </div>
+      <div class="layer-alert__bottom">
+        <button>확인</button>
+      </div>
+    </div>
 
     <script>
       // 모달 팝업 리사이징 이벤트 기능

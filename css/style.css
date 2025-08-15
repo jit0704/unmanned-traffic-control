@@ -17,7 +17,7 @@ body {
 
 body {
   min-width: 1920px;
-  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Pretendard, Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 h1,
@@ -25,7 +25,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Pretendard, Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0;
   line-height: 100%;
 }
@@ -73,7 +73,7 @@ button {
   border: 0;
   outline: 0;
   text-align: left;
-  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Pretendard, Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: transparent;
   cursor: pointer;
 }
@@ -92,10 +92,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Pretendard, Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
-input[type=date] {
+input[type='date'] {
   border: 0;
   outline: 0;
 }
@@ -122,58 +122,58 @@ section {
 /* 스크롤바 커스텀 */
 /* 웹폰트 Pretendard */
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 900;
   font-display: fallback;
-  src: local("Pretendard Black"), url("/font/Pretendard-Black.woff2") format("woff2");
+  src: local('Pretendard Black'), url('/font/Pretendard-Black.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 800;
   font-display: fallback;
-  src: local("Pretendard ExtraBold"), url("/font/Pretendard-ExtraBold.woff2");
+  src: local('Pretendard ExtraBold'), url('/font/Pretendard-ExtraBold.woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 700;
   font-display: fallback;
-  src: local("Pretendard Bold"), url("/font/Pretendard-Bold.woff2") format("woff2");
+  src: local('Pretendard Bold'), url('/font/Pretendard-Bold.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 600;
   font-display: fallback;
-  src: local("Pretendard SemiBold"), url("/font/Pretendard-SemiBold.woff2") format("woff2");
+  src: local('Pretendard SemiBold'), url('/font/Pretendard-SemiBold.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 500;
   font-display: fallback;
-  src: local("Pretendard Medium"), url("/font/Pretendard-Medium.woff2") format("woff2");
+  src: local('Pretendard Medium'), url('/font/Pretendard-Medium.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 400;
   font-display: fallback;
-  src: local("Pretendard Regular"), url("/font/Pretendard-Regular.woff2") format("woff2");
+  src: local('Pretendard Regular'), url('/font/Pretendard-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 300;
   font-display: fallback;
-  src: local("Pretendard Light"), url("/font/Pretendard-Light.woff2") format("woff2");
+  src: local('Pretendard Light'), url('/font/Pretendard-Light.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 200;
   font-display: fallback;
-  src: local("Pretendard ExtraLight"), url("/font/Pretendard-ExtraLight.woff2") format("woff2");
+  src: local('Pretendard ExtraLight'), url('/font/Pretendard-ExtraLight.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
   font-weight: 100;
   font-display: fallback;
-  src: local("Pretendard Thin"), url("/font/Pretendard-Thin.woff2") format("woff2");
+  src: local('Pretendard Thin'), url('/font/Pretendard-Thin.woff2') format('woff2');
 }
 /*---------------------------------------------------------------
   [help class]
@@ -211,11 +211,11 @@ section {
   box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.25);
 }
 .login-wrapper main::before {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 170px;
-  background-image: url("/images/login_bg.png");
+  background-image: url('/images/login_bg.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -241,7 +241,7 @@ section {
   border: 1px solid #e0e0e0;
 }
 .login-container > span::before {
-  content: "";
+  content: '';
   width: 24px;
   height: 24px;
 }
@@ -317,7 +317,7 @@ input.datebox {
 .btn-search {
   width: 26px;
   height: 26px;
-  background-image: url("/images/icon_search.png");
+  background-image: url('/images/icon_search.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -330,7 +330,7 @@ input.datebox {
 .btn-excel-down {
   width: 26px;
   height: 26px;
-  background-image: url("/images/icon_excel.png");
+  background-image: url('/images/icon_excel.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -343,7 +343,7 @@ input.datebox {
 .btn-play {
   width: 26px;
   height: 26px;
-  background-image: url("/images/icon_play.png");
+  background-image: url('/images/icon_play.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -352,7 +352,7 @@ input.datebox {
 .btn-down {
   width: 26px;
   height: 26px;
-  background-image: url("/images/icon_down.png");
+  background-image: url('/images/icon_down.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -361,7 +361,7 @@ input.datebox {
 .btn-close {
   width: 30px;
   height: 30px;
-  background-image: url("/images/icon_close_white.png");
+  background-image: url('/images/icon_close_white.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -451,10 +451,10 @@ input.datebox {
   color: #737c86;
 }
 .wrapper > .header .right button::before {
-  content: "";
+  content: '';
   width: 18px;
   height: 18px;
-  background-image: url("/images/icon_user.png");
+  background-image: url('/images/icon_user.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -489,14 +489,14 @@ input.datebox {
   margin-top: 10px;
 }
 .main-container > nav > a::before {
-  content: "";
+  content: '';
   display: block;
   margin: 3px auto 0;
 }
 .main-container > nav .btn-crackdown::before {
   width: 20px;
   height: 20px;
-  background-image: url("/images/menu1.png");
+  background-image: url('/images/menu1.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -511,7 +511,7 @@ input.datebox {
 .main-container > nav .btn-stats::before {
   width: 20px;
   height: 20px;
-  background-image: url("/images/menu2.png");
+  background-image: url('/images/menu2.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -850,11 +850,15 @@ input.datebox {
   border-right: 1px solid #dfe3e8;
 }
 .crackdown-info-container td {
-  height: 47px;
+  height: 40px;
   padding: 0 20px;
   vertical-align: middle;
   text-align: center;
   border-bottom: 1px solid #dfe3e8;
+}
+
+.crackdown-info-container td .c-state {
+  color: #ff9500;
 }
 
 .statistics {
@@ -932,7 +936,8 @@ input.datebox {
   border-radius: 10px;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-.chart-container > img, .chart-container > svg {
+.chart-container > img,
+.chart-container > svg {
   display: block;
   width: 100%;
   height: 100%;
@@ -1017,4 +1022,247 @@ footer .copylight {
   line-height: 20px;
   font-size: 10px;
   color: rgb(76, 76, 76);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*---------------------------------------------------------------
+  수정 및 추가 건 2025-08-15
+-----------------------------------------------------------------*/
+.layer-alert {
+  width: 500px;
+  height: 230px;
+  padding: 0 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 6px;
+  border-right: 1px solid var(--Grey-300, #dfe3e8);
+  background: var(--Common-White, #fff);
+  box-shadow: 5px 4px 40px 0 rgba(0, 0, 0, 0.05);
+  /* background-color: #fff; */
+  position: absolute;
+  left: 20%;
+  top: 70%;
+  z-index: 100;
+}
+.layer-alert.center {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.layer-alert.type02 {
+  /* left: 50%;
+  top: 70%; */
+  height: auto;
+  padding-bottom: 10px;
+}
+.layer-alert.type02 .alarm-list-wrap {
+  margin: 20px 0 0;
+}
+.layer-alert.type02 .alarm-list li {
+  display: flex;
+  /* width: 470px; */
+  height: 70px;
+  padding: 10px 0;
+  margin-bottom: 9px;
+  justify-content: flex-start;
+  border-radius: 6px;
+  border: 1px solid var(--Grey-300, #dfe3e8);
+  background: var(--Common-White, #fff);
+}
+.layer-alert.type02 .alarm-list li .alarm-triangle-wrap {
+  width: 45px;
+}
+.layer-alert.type02 .alarm-list li .alarm-triangle {
+  width: 20px;
+  height: 18px;
+  margin: 0 0 0 15px;
+  background: url(/images/icon_alert_triangle02.png) no-repeat 0 0;
+}
+.layer-alert.type02 .alarm-list li .alarm-detail .alarm-kind {
+  color: #212b36;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+}
+.layer-alert.type02 .alarm-list li .alarm-detail .alarm-date {
+  color: var(--SubTxt2, #737c86);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+}
+.layer-alert.type02 .alarm-list li .alarm-detail p {
+  margin: 10px 0 0;
+  color: var(--SubTxt2, #737c86);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 16.8px */
+}
+.layer-alert .layer-alert__header {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--Gray300, #a6a6a6);
+}
+.layer-alert .layer-alert__header .title {
+  color: var(--SubTxt2, #737c86);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Subtitle1 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 22.4px */
+}
+
+.layer-alert .layer-alert__header button {
+  width: 24px;
+  height: 24px;
+  background: url(/images/icon_x.png) no-repeat 0 0;
+  font-size: 0;
+  line-height: 0;
+}
+.layer-alert .layer-alert__content {
+  display: flex;
+  margin-top: 25.5px;
+  color: var(--MainTxt, #212b36);
+  font-feature-settings: 'ss01' on, 'ss08' on;
+
+  /* Mid/PC | medium | 16px */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+.layer-alert .layer-alert__content .alert-triangle {
+  width: 66px;
+  height: 58px;
+  background: url(/images/icon_alert_triangle.png) no-repeat 0 0;
+  margin: 18.5px 50px 0 24px;
+}
+.layer-alert .layer-alert__content p {
+  margin: 11.5px 0 0;
+  line-height: 150%; /* 24px */
+}
+
+.layer-alert .layer-alert__bottom {
+  display: flex;
+  justify-content: center;
+}
+.layer-alert .layer-alert__bottom button {
+  width: 90px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #375596;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Button1 */
+  margin: 18px 0;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+}
+.wrapper > .header .right {
+  position: relative;
+}
+.wrapper > .header .right .alarm-bell {
+  display: block;
+  width: 39px;
+  height: 41px;
+  background: url(/images/icon_bell.png) no-repeat 0 bottom;
+  /* background-size: 100% 100%; */
+}
+.wrapper > .header .right .alarm-bell::before {
+  display: none;
+}
+.wrapper > .header .right .btn-logout {
+  flex: 1;
+}
+.wrapper > .header .right .alarm-bell.active {
+  background-image: url(/images/icon_bell_on.png);
+}
+.wrapper > .header .right .layer-alert {
+  top: 48px;
+  left: auto;
+  right: 172px;
+}
+.wrapper > .header .right .layer-alert .alarm-list-wrap {
+  overflow-y: auto;
+  height: 169px;
+}
+.tab-type01-wrap ul {
+  display: flex;
+  width: calc(100% - 65px);
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 15px 32px;
+  border-bottom: 1px solid #a6a6a6;
+}
+.tab-type01-wrap li {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  padding: 13px 19px;
+  margin-right: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px 5px 0 0;
+  background: #d9d9d9;
+  color: #fff;
+}
+.tab-type01-wrap li.on {
+  background: #2a4173;
+}
+.tab-type01-wrap li a {
+  color: #fff;
+}
+.filter-container .filter-btn {
+  display: flex;
+  width: 35px;
+  height: 36px;
+  padding: 2px var(--padding-padding-xs, 8px);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+.filter-container .filter-btn.pdf {
+  background: url(/images/Icon_pdf.png) no-repeat 0 0;
+}
+.filter-container .filter-btn.print {
+  background: url(/images/Icon_print.png) no-repeat 0 0;
+}
+
+/* .filter-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25.5px !important;
+}
+.filter-container .left {
+  display: flex;
+  gap: 16px;
+}
+.filter-container .right {
+  display: flex;
+  gap: 10px;
+} */
