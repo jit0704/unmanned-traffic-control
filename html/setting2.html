@@ -24,7 +24,7 @@
           <a href="main.html" class="btn-crackdown">단속현황</a>
           <a href="main2.html" class="btn-stats">통계</a>
           <a href="violation.html" class="btn-stats violate">위반위력</a>
-          <a href="setting1.html" class="btn-stats setting">설정</a>
+          <a href="setting1.html" class="btn-stats setting active">설정</a>
           <div class="lang-dropdown-container">
             <button type="button" id="lang-button">
               <img src="/images/lang_es.png" alt="스페인어" id="lang-image" />
@@ -46,31 +46,167 @@
             </div>
           </div>
         </nav>
-        <section class="main-content statistics">
+        <section class="main-content statistics setting-spot-container">
           <div class="tab-type01-wrap">
             <ul>
-              <li><a href="setting1.html">지점 관리</a></li>
-              <li class="on"><a href="setting2.html">시스템 관리</a></li>
+              <li><a href="setting1.html">지점관리</a></li>
+              <li class="on"><a href="setting2.html">시스템관리</a></li>
             </ul>
           </div>
           <!-- //tab-type01-wrap -->
-
-          <!-- <hgroup class="filter-container">
-            <em>지점 명</em>
-            <select class="selectbox" style="width: 186px">
-              <option value="">지점 1번</option>
-              <option value="">지점 2번</option>
-              <option value="">지점 3번</option>
-            </select>
-            <select class="selectbox" style="width: 146px">
-              <option value="">일별</option>
-              <option value="">아이템</option>
-            </select>
-            <input type="date" class="datebox" />
-            <input type="date" class="datebox" />
-            <button type="button" class="btn-primary">검색</button>
-          </hgroup> -->
-          <main>설정 - 시스템 관리 화면</main>
+          <div class="setting-cont-wrap">
+            <div class="left">
+              <hgroup class="filter-container type04">
+                <div class="left">
+                  <select class="selectbox" style="width: 175px">
+                    <option value="">KEY</option>
+                  </select>
+                  <button type="button" class="btn-primary">검색</button>
+                </div>
+                <div class="right">
+                  <button type="button" class="btn-type03"><span>추가</span></button>
+                  <button type="button" class="btn-type03"><span>삭제</span></button>
+                </div>
+              </hgroup>
+              <div class="tbl-wrap type02">
+                <table class="tbl">
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>Key</th>
+                      <th>Value</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="checked">
+                      <td class="check"><input type="checkbox" /></td>
+                      <td>1</td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td>2</td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td>3</td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td></td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="right">
+              <div class="title-btn-type">
+                <div class="title">상세정보</div>
+                <div class="btn-group">
+                  <button type="button" class="btn-primary">저장</button>
+                </div>
+              </div>
+              <div class="tbl-type03-wrap">
+                <table class="tbl-type03">
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Key</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="L0002" readonly />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Value</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="10" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Name</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="이상 횟수" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Description</th>
+                      <td>
+                        <textarea name="" id="" class="t-textarea" style="height: 180px">
+신호 위반 중복 이상 설정 - 이상 횟수(건)
+동일 지점에서 신호 위반 건수가 설정한 검사 시간 동안 이상 횟수를 초과하였을 경우 신호 상태에 대한 확인이 필요하다는 경고 표출하여 위반 여부에 대한 검토를 관리자가 진행
+                        </textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <!-- //main-container -->

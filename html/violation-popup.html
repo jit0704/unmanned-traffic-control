@@ -23,7 +23,7 @@
         <nav>
           <a href="main.html" class="btn-crackdown">단속현황</a>
           <a href="main2.html" class="btn-stats">통계</a>
-          <a href="violation.html" class="btn-stats violate">위반위력</a>
+          <a href="violation.html" class="btn-stats violate active">위반위력</a>
           <a href="setting1.html" class="btn-stats setting">설정</a>
           <div class="lang-dropdown-container">
             <button type="button" id="lang-button">
@@ -47,21 +47,6 @@
           </div>
         </nav>
         <section class="main-content statistics">
-          <!-- <hgroup class="filter-container">
-            <em>지점 명</em>
-            <select class="selectbox" style="width: 186px">
-              <option value="">지점 1번</option>
-              <option value="">지점 2번</option>
-              <option value="">지점 3번</option>
-            </select>
-            <select class="selectbox" style="width: 146px">
-              <option value="">일별</option>
-              <option value="">아이템</option>
-            </select>
-            <input type="date" class="datebox" />
-            <input type="date" class="datebox" />
-            <button type="button" class="btn-primary">검색</button>
-          </hgroup> -->
           <main>위반 이력 화면 - 증거 검색 팝업</main>
         </section>
       </main>
@@ -69,6 +54,145 @@
       <footer>
         <p class="copylight">Copyright 2025, MOPTICON CO, LTD ALL rights reserved.</p>
       </footer>
+    </div>
+
+    <div class="layer-popup-container">
+      <div class="layer-popup type03">
+        <div class="layer-popup__header">
+          <div class="title">증거 이력 검색</div>
+          <button type="button">닫힘</button>
+        </div>
+        <div class="layer-popup__content violation-popup-container">
+          <hgroup class="filter-container type03">
+            <div class="left">
+              <input type="text" class="t-input" placeholder="차량번호" style="width: 110px" />
+              <button type="button" class="btn-primary">검색</button>
+            </div>
+            <div class="right">
+              <button type="button" class="btn-type01"><span>위반</span></button>
+              <button type="button" class="btn-type02"><span>취소</span></button>
+              <button type="button" class="filter-btn02 paly02"></button>
+              <button type="button" class="filter-btn02 save"></button>
+            </div>
+          </hgroup>
+
+          <article class="evidence">
+            <div class="crackdown-photo-container">
+              <div class="enlarge-container-left">
+                <!-- 250317: 디폴트 이미지 노출시 data-img-none 클래스명 추가 -->
+                <div class="enlarge-photo data-img-none">
+                  <button type="button">
+                    <img src="https://placehold.co/1000x1000" alt="" />
+                  </button>
+                </div>
+                <!-- //enlarge-photo -->
+
+                <div class="license-plate data-img-none">
+                  <button type="button">
+                    <img src="https://placehold.co/1000x1000" alt="" />
+                  </button>
+                </div>
+                <!-- //license-plate -->
+              </div>
+              <!-- //enlarge-container -->
+              <div class="enlarge-container-right">
+                <ul class="thumnail-list type3">
+                  <!-- <li class="data-none">증거 사진 없음</li> -->
+                  <li class="data-img-none">
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                  </li>
+                </ul>
+
+                <!-- //thumnail-container -->
+                <ul class="thumnail-list type4">
+                  <!-- <li class="data-none">신호 사진 없음</li> -->
+                  <li class="data-img-none">
+                    <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
+                  </li>
+                  <li class="data-img-none">
+                    <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
+                  </li>
+                </ul>
+                <!-- //thumnail-container -->
+              </div>
+            </div>
+            <!-- //crackdown-photo-container -->
+            <table class="crackdown-info-container type02">
+              <colgroup>
+                <col style="width: 200px" />
+                <col />
+                <col style="width: 200px" />
+                <col />
+                <col style="width: 200px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>차량 번호</th>
+                  <td>111하 1234</td>
+                  <th>위반 유형</th>
+                  <td>속도 위반</td>
+                  <th>차량 종류</th>
+                  <td>승용차</td>
+                </tr>
+                <tr>
+                  <th>위반 일시</th>
+                  <td>2025-02-01 15:40:00</td>
+                  <th>위반 차로</th>
+                  <td>1차로</td>
+                  <th>정지 통과</th>
+                  <td>1.045</td>
+                </tr>
+                <tr>
+                  <th>수신 일시</th>
+                  <td>2025-02-01 15:41:00</td>
+                  <th>신호 상태</th>
+                  <td>적색</td>
+                  <th>교차 통과</th>
+                  <td>3.541</td>
+                </tr>
+                <tr>
+                  <th>제한 속도</th>
+                  <td>70 km/h</td>
+                  <th>단속 속도</th>
+                  <td>80 km/h</td>
+                  <th>실 주행 속도</th>
+                  <td>80.48 km/h</td>
+                </tr>
+                <tr>
+                  <th>구역</th>
+                  <td>La Victoria</td>
+                  <th>지점 명</th>
+                  <td>Loacation 2</td>
+                  <th>처리 상태</th>
+                  <td><span class="c-state">위반</span> / 취소</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </div>
     </div>
     <!-- //wrapper -->
   </body>

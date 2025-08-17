@@ -24,7 +24,7 @@
           <a href="main.html" class="btn-crackdown">단속현황</a>
           <a href="main2.html" class="btn-stats">통계</a>
           <a href="violation.html" class="btn-stats violate">위반위력</a>
-          <a href="setting1.html" class="btn-stats setting">설정</a>
+          <a href="setting1.html" class="btn-stats setting active">설정</a>
           <div class="lang-dropdown-container">
             <button type="button" id="lang-button">
               <img src="/images/lang_es.png" alt="스페인어" id="lang-image" />
@@ -46,31 +46,212 @@
             </div>
           </div>
         </nav>
-        <section class="main-content statistics">
+        <section class="main-content statistics setting-spot-container">
           <div class="tab-type01-wrap">
             <ul>
-              <li class="on"><a href="setting1.html">지점 관리</a></li>
-              <li><a href="setting2.html">시스템 관리</a></li>
+              <li class="on"><a href="setting1.html">지점관리</a></li>
+              <li><a href="setting2.html">시스템관리</a></li>
             </ul>
           </div>
           <!-- //tab-type01-wrap -->
+          <div class="setting-cont-wrap">
+            <div class="left">
+              <hgroup class="filter-container type04">
+                <div class="left">
+                  <select class="selectbox" style="width: 175px">
+                    <option value="">차량번호 or 지점 명</option>
+                  </select>
+                  <button type="button" class="btn-primary">검색</button>
+                </div>
+                <div class="right">
+                  <button type="button" class="btn-type03"><span>추가</span></button>
+                  <button type="button" class="btn-type03"><span>삭제</span></button>
+                </div>
+              </hgroup>
+              <div class="tbl-wrap type02">
+                <table class="tbl">
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>지점 ID</th>
+                      <th>지점 명</th>
+                      <th>구역</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="checked">
+                      <td class="check"><input type="checkbox" /></td>
+                      <td>1</td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td>2</td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                    <tr>
+                      <td class="check"><input type="checkbox" /></td>
+                      <td>3</td>
+                      <td>L0001</td>
+                      <td>Location1</td>
+                      <td>La Victoria</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="right">
+              <div class="title-btn-type">
+                <div class="title">상세정보</div>
+                <div class="btn-group">
+                  <button type="button" class="btn-primary">저장</button>
+                </div>
+              </div>
+              <div class="tbl-type03-wrap">
+                <table class="tbl-type03">
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col style="width: 225px" />
+                    <col style="width: 120px" />
+                    <col style="width: 225px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>지점 ID</th>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-90" placeholder="L0002" readonly />
+                      </td>
+                      <th>지점 명</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="Location 2" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>구역 명</th>
+                      <td colspan="3">
+                        <input type="text" class="t-input" placeholder="La Victoria" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>주소</th>
+                      <td colspan="3">
+                        <input type="text" class="t-input" placeholder="Av. Brasil 920, Breña 15083 Peru" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>IP 주소</th>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-90" placeholder="192.168.100.1" />
+                      </td>
+                      <th>카메라 번호</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="000" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>위도</th>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-90" placeholder="192.168.100.1" />
+                      </td>
+                      <th>경도</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="-77.034060" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>UBIGEO</th>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-90" placeholder="15001" />
+                      </td>
+                      <th>현장 원격 서버 포트</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="0000000" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-          <!-- <hgroup class="filter-container">
-            <em>지점 명</em>
-            <select class="selectbox" style="width: 186px">
-              <option value="">지점 1번</option>
-              <option value="">지점 2번</option>
-              <option value="">지점 3번</option>
-            </select>
-            <select class="selectbox" style="width: 146px">
-              <option value="">일별</option>
-              <option value="">아이템</option>
-            </select>
-            <input type="date" class="datebox" />
-            <input type="date" class="datebox" />
-            <button type="button" class="btn-primary">검색</button>
-          </hgroup> -->
-          <main>설정 - 지점 관리 화면</main>
+              <div class="title-btn-type">
+                <div class="title">단속 속도 값 변경(단위:km/h)</div>
+                <div class="btn-group">
+                  <button type="button" class="btn-primary">저장</button>
+                  <button type="button" class="btn-primary">변경 요청</button>
+                </div>
+              </div>
+              <div class="tbl2-wrap">
+                <table class="tbl2">
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>제한속도</th>
+                      <th>단속속도</th>
+                      <th>초과속도</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-70 ac" placeholder="60" />
+                      </td>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-70 ac" placeholder="70" />
+                      </td>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-70 ac" placeholder="10" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="title-btn-type">
+                <div class="title">시각 동기화 확인</div>
+                <div class="btn-group">
+                  <button type="button" class="btn-primary">조회</button>
+                  <button type="button" class="btn-primary">변경 요청</button>
+                </div>
+              </div>
+              <div class="tbl-type03-wrap bottom-line">
+                <table class="tbl-type03">
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col style="width: 225px" />
+                    <col style="width: 120px" />
+                    <col style="width: 225px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>상태 수신 시간</th>
+                      <td>
+                        <input type="text" class="t-input frm-wsize-90" placeholder="2025-07-01  11:50:33" />
+                      </td>
+                      <th>현재 시간</th>
+                      <td>
+                        <input type="text" class="t-input" placeholder="2025-07-01  14:00:00" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <!-- //main-container -->
