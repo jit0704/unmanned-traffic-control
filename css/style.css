@@ -1830,6 +1830,7 @@ button.filter-btn02.save {
   padding: 26px 32px 0;
 }
 .title-type02 {
+  display: flex;
   color: #2a4173;
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Pretendard;
@@ -1837,6 +1838,15 @@ button.filter-btn02.save {
   font-style: normal;
   font-weight: 700;
   line-height: 140%; /* 28px */
+}
+.title-type02 .sub-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.title-type02 .sub-title::after {
+  content: '|';
+  margin: 0 9px;
 }
 .items-list-wrap {
   margin-top: 10px;
@@ -1885,4 +1895,23 @@ button.filter-btn02.save {
   align-items: flex-start;
   margin: 10px 0;
   align-self: stretch;
+}
+
+.chart-container.type02 {
+  height: 200px;
+  margin: 5px 0 23px;
+}
+.devide2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 31px;
+}
+.devide2 .left {
+  width: 70%;
+}
+.devide2 .right {
+  width: 30%;
+}
+.mgt-0 {
+  margin-top: 0 !important;
 }

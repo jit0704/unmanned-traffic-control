@@ -55,22 +55,63 @@
           </div>
           <!-- //tab-type01-wrap -->
 
-          <!-- <hgroup class="filter-container">
-            <em>지점 명</em>
-            <select class="selectbox" style="width: 186px">
-              <option value="">지점 1번</option>
-              <option value="">지점 2번</option>
-              <option value="">지점 3번</option>
-            </select>
-            <select class="selectbox" style="width: 146px">
-              <option value="">일별</option>
-              <option value="">아이템</option>
-            </select>
-            <input type="date" class="datebox" />
-            <input type="date" class="datebox" />
-            <button type="button" class="btn-primary">검색</button>
-          </hgroup> -->
-          <main>작업중..</main>
+          <hgroup class="filter-container type02">
+            <div class="left">
+                <select class="selectbox" style="width: 146px">
+                  <option value="">일별</option>
+                  <option value="">아이템</option>
+                </select>
+                <input type="date" class="datebox" />
+                <input type="date" class="datebox" />
+                <button type="button" class="btn-primary">검색</button>
+            </div>
+            <div class="right">
+                <button type="button" class="filter-btn pdf"></button>
+                <button type="button" class="filter-btn print"></button>
+            </div>
+          </hgroup>
+          <div class="content-wrap">
+            <div class="title-type02"> 
+              <span class="sub-title">단속량 분석</span>
+              <span class="sub-date">2025-07-01 ~ 2025-07-06</span>
+            </div>
+            <div class="items-list-wrap">
+              <ul class="items-list">
+                <li>총 위반 건수: <span>3,000건</span></li>
+                <li>평균 위반 건수: <span>500건</span></li>
+                <li>위반 최다 지점: <span>1,000건 (c지점)</span></li>
+                <li>위반 최다 유형: <span>900건 (속도위반)</span></li>
+              </ul>
+            </div>
+            <main class="mgt-0">
+              <article>
+                <div class="title-type03">
+                  시간대 별(일별, 월별) 지점 단속량
+                </div>
+                <div class="chart-container type02">
+                  <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+                </div>
+                <div class="devide2">
+                  <div class="left">
+                    <div class="title-type03">
+                      지점 별 유형 단속량
+                    </div>
+                    <div class="chart-container type02">
+                      <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="title-type03">
+                      위반 유형 별 비율
+                    </div>
+                    <div class="chart-container type02">
+                      <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </main>
+          </div>
         </section>
       </main>
       <!-- //main-container -->
