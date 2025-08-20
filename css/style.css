@@ -93,6 +93,7 @@ optgroup,
 select,
 textarea {
   font-family: Pretendard, Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: 0;
 }
 
 input[type='date'] {
@@ -312,6 +313,10 @@ input.datebox {
   border: 1px solid #dfe3e8;
   font-size: 14px;
   color: #737c86;
+}
+/* 2025-80-20 */
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
 }
 
 .btn-search {
@@ -1450,6 +1455,10 @@ table.tbl {
 table.tbl tr {
   border-bottom: 1px solid var(--Grey-300, #dfe3e8);
 }
+/* 2025-80-20 */
+table.tbl tbody tr:hover {
+  cursor: pointer;
+}
 table.tbl th,
 table.tbl2 th {
   height: 50px;
@@ -1486,6 +1495,9 @@ table.tbl tr.checked td {
 }
 .ac {
   text-align: center;
+}
+.ac2 {
+  justify-content: center;
 }
 .ar {
   text-align: right;
@@ -1599,10 +1611,13 @@ input[type='checkbox'] {
 }
 .layer-popup .layer-popup__content .big-img {
   height: 589px;
+  padding: 0 10px 10px;
+  background: #f6f6f6;
+  border-radius: 0 0 10px 10px;
 }
 .layer-popup .layer-popup__content .big-img img {
-  width: 1200px;
-  height: 589px;
+  width: 1180px;
+  height: 579px;
 }
 .pagenation {
   display: flex;
