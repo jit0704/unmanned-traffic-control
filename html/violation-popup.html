@@ -68,7 +68,9 @@
               <input type="text" class="t-input" placeholder="차량번호" style="width: 110px" />
               <button type="button" class="btn-primary">검색</button>
             </div>
-            <div class="right">
+            <div class="right vertical-center">
+              <em class="siam-result">SIAM 전송 완료</em>
+              <button type="button" class="btn-type01 c-navy siam"><span>SIAM</span></button>
               <button type="button" class="btn-type01"><span>위반</span></button>
               <button type="button" class="btn-type02"><span>취소</span></button>
               <button type="button" class="filter-btn02 paly02"></button>
@@ -96,44 +98,58 @@
               </div>
               <!-- //enlarge-container -->
               <div class="enlarge-container-right">
-                <ul class="thumnail-list type3">
-                  <!-- <li class="data-none">증거 사진 없음</li> -->
+                <ul class="thumnail-list-v2">
                   <li class="data-img-none">
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
                   </li>
                   <li>
-                    <button type="button"><img src="https://placehold.co/154x103" alt="" /></button>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
+                  </li>
+                  <li>
+                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
+                  </li>
+                  <li class="img-lg">
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/015/2025/08/15/0005171169_001_20250815093714010.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li class="img-lg">
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/015/2025/08/15/0005171169_001_20250815093714010.jpg" alt="" />
+                    </button>
                   </li>
                 </ul>
 
                 <!-- //thumnail-container -->
-                <ul class="thumnail-list type4">
-                  <!-- <li class="data-none">신호 사진 없음</li> -->
+                <!-- <ul class="thumnail-list type4">
                   <li class="data-img-none">
                     <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
                   </li>
                   <li class="data-img-none">
                     <button type="button"><img src="https://placehold.co/317x160" alt="" /></button>
                   </li>
-                </ul>
+                </ul> -->
                 <!-- //thumnail-container -->
               </div>
             </div>
@@ -195,5 +211,52 @@
       </div>
     </div>
     <!-- //wrapper -->
+
+    <script>
+      // 썸네일 이미지 또는 영상 더블 클릭시 확대 또는 축소 하는 UI인터랙션 기능
+      document.addEventListener('DOMContentLoaded', () => {
+        const thumnailList = document.querySelector('.thumnail-list-v2');
+        if (!thumnailList) return; // 요소가 없으면 실행하지 않음
+
+        let expandedElement = null; // 현재 확대된 요소 (li)를 추적
+
+        thumnailList.addEventListener('dblclick', (e) => {
+          const clickedButton = e.target.closest('li > button');
+          if (!clickedButton) return; // 버튼이 아니면 리턴
+
+          const clickedLi = clickedButton.parentElement; // 클릭된 button의 부모 li
+          const clickedImg = clickedButton.querySelector('img');
+
+          if (!clickedImg) return; // img가 없으면 리턴
+
+          // 현재 확대된 요소가 있다면 (축소)
+          if (expandedElement) {
+            // 현재 클릭된 요소와 확대된 요소가 같으면 축소
+            if (expandedElement === clickedLi) {
+              expandedElement.classList.remove('thumnail-item-expanded');
+              thumnailList.classList.remove('enlarged-active');
+              expandedElement = null;
+            }
+          } else {
+            // 확대된 요소가 없다면 (확대)
+            expandedElement = clickedLi;
+            clickedLi.classList.add('thumnail-item-expanded');
+            thumnailList.classList.add('enlarged-active');
+          }
+        });
+
+        // 팝업 닫힘 버튼 클릭 시 확대 상태 해제
+        const closePopupButton = document.querySelector('.layer-popup__header button');
+        if (closePopupButton) {
+          closePopupButton.addEventListener('click', () => {
+            if (expandedElement) {
+              expandedElement.classList.remove('thumnail-item-expanded');
+              thumnailList.classList.remove('enlarged-active');
+              expandedElement = null;
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

@@ -49,20 +49,27 @@
         <section class="main-content statistics violation-container">
           <hgroup class="filter-container type02">
             <div class="left">
-              <select class="selectbox" style="width: 146px">
+              <select class="selectbox" style="width: 186px">
                 <option value="">지점 명 or 전체</option>
               </select>
-              <select class="selectbox02" style="width: 146px">
+              <select class="selectbox02" style="width: 186px">
                 <option value="">위반유형 or 전체</option>
+              </select>
+              <select class="selectbox02" style="width: 186px">
+                <option value="">처리상태</option>
+              </select>
+              <select class="selectbox02" style="width: 186px">
+                <option value="">전송상태</option>
               </select>
               <input type="date" class="datebox" />
               <input type="date" class="datebox" />
               <input type="text" class="t-input" placeholder="차량번호" style="width: 120px" />
-              <button type="button" class="btn-primary">검색</button>
               <button type="button" class="filter-btn-excel"></button>
+              <button type="button" class="btn-primary">검색</button>
             </div>
             <div class="right">
-              <button type="button" class="filter-btn-search">증거 검색</button>
+              <button type="button" class="btn-type01 c-navy siam"><span>SIAM</span></button>
+              <button type="button" class="filter-btn-search bold">증거 검색</button>
             </div>
           </hgroup>
           <div class="tbl-wrap">
@@ -80,23 +87,21 @@
                 <col />
                 <col />
                 <col />
-                <col />
               </colgroup>
               <thead>
                 <tr>
                   <th></th>
                   <th>NO</th>
                   <th>위반 일시</th>
-                  <th>지점 ID</th>
                   <th>지점 명</th>
                   <th>구역</th>
                   <th>위반 차로</th>
                   <th>위반 유형</th>
-                  <th>제한 속도</th>
                   <th>주행 속도</th>
                   <th>차종</th>
                   <th>차량번호</th>
                   <th>처리상태</th>
+                  <th>전송상태</th>
                 </tr>
               </thead>
               <tbody>
@@ -104,16 +109,15 @@
                   <td class="check"><input type="checkbox" /></td>
                   <td>1</td>
                   <td>2025-08-15 13:30:00.000</td>
-                  <td>L0001</td>
                   <td>Location1</td>
                   <td>La Victoria</td>
                   <td>2</td>
                   <td>속도위반</td>
-                  <td>80</td>
                   <td>100.55</td>
                   <td>승용차</td>
                   <td>123러 8766</td>
                   <td><span class="fc-blue01">대기(검토)</span></td>
+                  <td>전송</td>
                 </tr>
                 <tr>
                   <td class="check"><input type="checkbox" /></td>
@@ -121,14 +125,13 @@
                   <td>2025-08-15 13:30:00.000</td>
                   <td>L0001</td>
                   <td>Location1</td>
-                  <td>La Victoria</td>
                   <td>2</td>
                   <td>속도위반</td>
-                  <td>80</td>
                   <td>100.55</td>
                   <td>승용차</td>
                   <td>123러 8766</td>
                   <td><span class="fc-orange01">위반</span></td>
+                  <td>미전송</td>
                 </tr>
                 <tr>
                   <td class="check"><input type="checkbox" /></td>
@@ -136,14 +139,13 @@
                   <td>2025-08-15 13:30:00.000</td>
                   <td>L0001</td>
                   <td>Location1</td>
-                  <td>La Victoria</td>
                   <td>2</td>
                   <td>속도위반</td>
-                  <td>80</td>
                   <td>100.55</td>
                   <td>승용차</td>
                   <td>123러 8766</td>
                   <td><span class="fc-gray01">취소</span></td>
+                  <td>미전송</td>
                 </tr>
               </tbody>
             </table>
