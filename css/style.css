@@ -1229,6 +1229,118 @@ footer .copylight {
 }
 
 /*---------------------------------------------------------------
+  [단속현황 팝업 style]
+-----------------------------------------------------------------*/
+.layer-popup.crackdown-popup-container {
+  .ui-draggable-handle {
+    cursor: move;
+  }
+
+  .layer-popup__content {
+    width: 1200px;
+    height: 688px;
+    /* background: red; */
+    background: #f6f6f6;
+    border: 10px solid #f6f6f6;
+    border-radius: 0 0 10px 10px;
+
+    .img-list-wrap {
+      overflow: hidden;
+      width: auto;
+      min-height: auto;
+
+      .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+        margin-top: -17.5px;
+        background: url(/images/icon_circle_arrow.png) no-repeat 0 0;
+        background-size: contain;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .swiper-button-next {
+        width: 35px;
+        height: 35px;
+        margin-top: -17.5px;
+        background: url(/images/icon_circle_arrow.png) no-repeat 0 0;
+        background-size: contain;
+        transform: rotate(180deg);
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .img-list {
+      /* gap: 0 10px; */
+      margin: 0;
+
+      li {
+        flex: 0 0 auto;
+        width: 142px;
+        height: 80px;
+        margin: 0;
+        border: 0;
+
+        button {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        video {
+          width: 100%;
+        }
+
+        &.data-img-none {
+          background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
+          background-size: contain;
+
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .view-content {
+      overflow: hidden;
+      height: calc(100% - 95px);
+      margin-top: 10px;
+      border-radius: 0 0 10px 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      video {
+        width: 100%;
+      }
+
+      &.data-img-none {
+        background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
+        background-size: contain;
+
+        img,
+        video {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
   수정 및 추가 건 2025-08-15
 -----------------------------------------------------------------*/
 .layer-alert {
@@ -1246,7 +1358,7 @@ footer .copylight {
   position: absolute;
   left: 20%;
   top: 70%;
-  z-index: 10;
+  /* z-index: 10; */
 }
 .layer-alert.center {
   position: fixed;
