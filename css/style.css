@@ -1091,6 +1091,11 @@ footer .copylight {
 .violation-popup-container {
   border-radius: 0 0 10px 10px;
 
+  .filter-container.type03 {
+    margin: 0 31px;
+    padding: 18px 3px 9px;
+  }
+
   .crackdown-photo-container {
     height: 529px;
   }
@@ -1105,6 +1110,14 @@ footer .copylight {
     .license-plate {
       height: 100px;
       margin-top: 16px;
+    }
+
+    .data-img-none2 {
+      background: #f2f2f2;
+
+      button {
+        display: none;
+      }
     }
   }
 
@@ -1125,12 +1138,12 @@ footer .copylight {
       li {
         width: 191px;
         height: 130px;
+        border: 1px solid #e0e0e0;
 
-        &.data-img-none {
+        &.data-img-none2 {
           width: 191px;
           height: 130px;
-          background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
-          background-size: contain;
+          background: #f2f2f2;
 
           button {
             display: none;
@@ -1184,8 +1197,12 @@ footer .copylight {
     }
   }
 
-  .crackdown-info-container td {
-    height: 42px;
+  .crackdown-info-container {
+    margin-top: 17px;
+
+    td {
+      height: 42px;
+    }
   }
 }
 
