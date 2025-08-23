@@ -23,8 +23,8 @@
         <nav>
           <a href="main.html" class="btn-crackdown">단속현황</a>
           <a href="main2.html" class="btn-stats">통계</a>
-          <a href="violation.html" class="btn-stats violate active">위반이력</a>
-          <a href="setting1.html" class="btn-stats setting">설정</a>
+          <a href="violation.html" class="btn-violate active">위반이력</a>
+          <a href="setting1.html" class="btn-setting">설정</a>
           <div class="lang-dropdown-container">
             <button type="button" id="lang-button">
               <img src="/images/lang_es.png" alt="스페인어" id="lang-image" />
@@ -57,16 +57,17 @@
     </div>
 
     <div class="layer-popup-container">
-      <div class="layer-popup type03">
+      <div class="layer-popup type03 violation-popup-wrapper">
         <div class="layer-popup__header">
-          <div class="title">증거 이력 검색</div>
+          <!-- <div class="title">증거 이력 검색</div> -->
           <button type="button">닫힘</button>
         </div>
         <div class="layer-popup__content violation-popup-container">
           <hgroup class="filter-container type03">
             <div class="left">
-              <input type="text" class="t-input" placeholder="차량번호" style="width: 110px" />
-              <button type="button" class="btn-primary">검색</button>
+              위반 상세 정보
+              <!-- <input type="text" class="t-input" placeholder="차량번호" style="width: 110px" />
+              <button type="button" class="btn-primary">검색</button> -->
             </div>
             <div class="right vertical-center">
               <em class="siam-result">SIAM 전송 완료</em>
@@ -89,9 +90,9 @@
                 </div>
                 <!-- //enlarge-photo -->
 
-                <div class="license-plate data-img-none">
+                <div class="license-plate">
                   <button type="button">
-                    <img src="https://placehold.co/1000x1000" alt="" />
+                    <img src="https://noonnucc-production.sfo2.cdn.digitaloceanspaces.com/202306/1685628411919633.jpeg" alt="" />
                   </button>
                 </div>
                 <!-- //license-plate -->
@@ -99,47 +100,71 @@
               <!-- //enlarge-container -->
               <div class="enlarge-container-right">
                 <ul class="thumnail-list-v2">
+                  <!-- 디폴트 이미지 클래스명: data-img-none -->
                   <li class="data-img-none">
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li>
-                    <button type="button"><img src="https://placehold.co/172x110" alt="" /></button>
-                  </li>
-                  <li class="img-lg">
                     <button type="button">
-                      <img src="https://imgnews.pstatic.net/image/015/2025/08/15/0005171169_001_20250815093714010.jpg" alt="" />
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
                     </button>
                   </li>
-                  <li class="img-lg">
+                  <li>
                     <button type="button">
-                      <img src="https://imgnews.pstatic.net/image/015/2025/08/15/0005171169_001_20250815093714010.jpg" alt="" />
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      <img src="https://imgnews.pstatic.net/image/422/2025/08/21/AKR20250821000303556_01_i_20250821000313722.jpg" alt="" />
                     </button>
                   </li>
                 </ul>
+
+                <section>
+                  <em>신호 위반 증거</em>
+                  <ul class="thumnail-list-v2">
+                    <li class="img-lg data-img-none">
+                      <button type="button">
+                        <img src="https://imgnews.pstatic.net/image/015/2025/08/15/0005171169_001_20250815093714010.jpg" alt="" />
+                      </button>
+                    </li>
+                    <li class="img-lg">
+                      <button type="button">
+                        <img src="https://imgnews.pstatic.net/image/015/2025/08/15/0005171169_001_20250815093714010.jpg" alt="" />
+                      </button>
+                    </li>
+                  </ul>
+                </section>
+
+                <!-- video 클래스명에 active 클래스를 추가하면 영상이 노출됩니다. -->
+                <section class="video">
+                  <video autoplay loop muted width="100%" height="100%">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                  </video>
+                </section>
 
                 <!-- //thumnail-container -->
                 <!-- <ul class="thumnail-list type4">
@@ -215,45 +240,49 @@
     <script>
       // 썸네일 이미지 또는 영상 더블 클릭시 확대 또는 축소 하는 UI인터랙션 기능
       document.addEventListener('DOMContentLoaded', () => {
-        const thumnailList = document.querySelector('.thumnail-list-v2');
-        if (!thumnailList) return; // 요소가 없으면 실행하지 않음
+        const thumnailLists = document.querySelectorAll('.thumnail-list-v2');
 
-        let expandedElement = null; // 현재 확대된 요소 (li)를 추적
+        thumnailLists.forEach((thumnailList) => {
+          let expandedElement = null; // 현재 확대된 요소 (li)를 추적
 
-        thumnailList.addEventListener('dblclick', (e) => {
-          const clickedButton = e.target.closest('li > button');
-          if (!clickedButton) return; // 버튼이 아니면 리턴
+          thumnailList.addEventListener('dblclick', (e) => {
+            const clickedButton = e.target.closest('li > button');
+            if (!clickedButton) return; // button이 아니면 리턴
 
-          const clickedLi = clickedButton.parentElement; // 클릭된 button의 부모 li
-          const clickedImg = clickedButton.querySelector('img');
+            const clickedLi = clickedButton.parentElement; // 클릭된 button의 부모 li
+            const clickedImg = clickedButton.querySelector('img');
+            if (!clickedImg) return; // img가 없으면 리턴
 
-          if (!clickedImg) return; // img가 없으면 리턴
-
-          // 현재 확대된 요소가 있다면 (축소)
-          if (expandedElement) {
-            // 현재 클릭된 요소와 확대된 요소가 같으면 축소
-            if (expandedElement === clickedLi) {
-              expandedElement.classList.remove('thumnail-item-expanded');
-              thumnailList.classList.remove('enlarged-active');
-              expandedElement = null;
+            // 현재 확대된 요소가 있다면 (축소)
+            if (expandedElement) {
+              // 현재 클릭된 요소와 확대된 요소가 같으면 축소
+              if (expandedElement === clickedLi) {
+                expandedElement.classList.remove('thumnail-item-expanded');
+                thumnailList.classList.remove('enlarged-active');
+                expandedElement = null; // 확대된 요소 초기화
+              }
+              // else: 다른 요소가 확대되어 있는데 다른 요소를 더블클릭한 경우
+            } else {
+              // 확대된 요소가 없다면 (확대)
+              expandedElement = clickedLi; // 현재 li를 확대된 요소로 설정
+              clickedLi.classList.add('thumnail-item-expanded');
+              thumnailList.classList.add('enlarged-active');
             }
-          } else {
-            // 확대된 요소가 없다면 (확대)
-            expandedElement = clickedLi;
-            clickedLi.classList.add('thumnail-item-expanded');
-            thumnailList.classList.add('enlarged-active');
-          }
+          });
         });
 
-        // 팝업 닫힘 버튼 클릭 시 확대 상태 해제
+        // 팝업 닫힘 버튼 클릭 시 모든 확대 상태 해제
         const closePopupButton = document.querySelector('.layer-popup__header button');
         if (closePopupButton) {
           closePopupButton.addEventListener('click', () => {
-            if (expandedElement) {
-              expandedElement.classList.remove('thumnail-item-expanded');
-              thumnailList.classList.remove('enlarged-active');
-              expandedElement = null;
-            }
+            thumnailLists.forEach((thumnailList) => {
+              const currentExpanded = thumnailList.querySelector('.thumnail-item-expanded');
+              if (currentExpanded) {
+                currentExpanded.classList.remove('thumnail-item-expanded');
+                thumnailList.classList.remove('enlarged-active');
+                // 해당 thumnailList의 expandedElement도 초기화 (내부 변수에 접근 불가하므로 클래스만 제거)
+              }
+            });
           });
         }
       });

@@ -528,6 +528,39 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .main-container > nav .btn-stats.active::before {
   background-image: url(/images/menu2_active.png);
 }
+
+.main-container > nav .btn-violate::before {
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/menu3.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.main-container > nav .btn-violate.active {
+  color: #fff;
+  background: #1f325b;
+}
+.main-container > nav .btn-violate.active::before {
+  background-image: url(/images/menu3_active.png);
+}
+
+.main-container > nav .btn-setting::before {
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/menu4.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.main-container > nav .btn-setting.active {
+  color: #fff;
+  background: #1f325b;
+}
+.main-container > nav .btn-setting.active::before {
+  background-image: url(/images/menu4_active.png);
+}
+
 .main-container > nav .lang-dropdown-container {
   position: absolute;
   bottom: 12px;
@@ -752,7 +785,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .enlarge-container-left .license-plate img {
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .enlarge-container-left .license-plate.data-img-none {
   background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
@@ -1034,7 +1067,7 @@ footer .copylight {
 -----------------------------------------------------------------*/
 .violation-container .tbl-wrap {
   overflow-y: auto;
-  height: calc(100% - 170px);
+  height: calc(100% - 142px);
   /* thead요소 position: sticky의 border 버그 문제를 해결하기 위해 div요소에 재정의 */
   border-top: 1px solid var(--Grey-300, #dfe3e8);
 }
@@ -1043,7 +1076,13 @@ footer .copylight {
   top: 0;
 }
 .violation-container .tbl-wrap thead th {
+  height: 42.5px;
   border-top: 0;
+}
+
+.violation-container .tbl-wrap tbody td {
+  height: 41.5px;
+  line-height: normal;
 }
 
 /*---------------------------------------------------------------
@@ -1053,23 +1092,24 @@ footer .copylight {
   border-radius: 0 0 10px 10px;
 
   .crackdown-photo-container {
-    height: 455px;
+    height: 529px;
   }
 
   .enlarge-container-left {
-    width: 602px;
+    width: 700px;
 
     .enlarge-photo {
-      height: 357px;
+      height: 416px;
     }
 
     .license-plate {
-      height: 83px;
-      margin-top: 14px;
+      height: 100px;
+      margin-top: 16px;
     }
   }
 
   .enlarge-container-right {
+    position: relative;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #e0e0e0;
@@ -1081,15 +1121,26 @@ footer .copylight {
       justify-content: flex-start;
       align-items: flex-start;
       gap: 5px;
-      height: 100% !important;
 
       li {
-        width: calc(172px - 0.8px);
+        width: 191px;
+        height: 130px;
+
+        &.data-img-none {
+          width: 191px;
+          height: 130px;
+          background: url(/images/img_default.png) no-repeat 50% 50% #e0e0e0;
+          background-size: contain;
+
+          button {
+            display: none;
+          }
+        }
 
         &.img-lg {
           overflow: hidden;
           width: calc(50% - 3px);
-          height: 203px;
+          height: 200px;
         }
 
         button {
@@ -1103,10 +1154,38 @@ footer .copylight {
         }
       }
     }
+
+    & > section {
+      height: 225px;
+      margin-top: 18px;
+
+      & > em {
+        line-height: 22px;
+        font-weight: 700;
+      }
+
+      .thumnail-list-v2 {
+        margin-top: 3px;
+      }
+    }
+
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      margin-top: 0;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 
   .crackdown-info-container td {
-    height: 56px;
+    height: 42px;
   }
 }
 
@@ -1128,6 +1207,25 @@ footer .copylight {
 }
 .setting-spot-container .setting-cont-wrap .left .tbl-wrap thead th {
   border-top: 0;
+}
+
+/*---------------------------------------------------------------
+  [증거 이력 검색 팝업 style]
+-----------------------------------------------------------------*/
+.layer-popup.type03.violation-popup-wrapper {
+  .layer-popup__header {
+    justify-content: flex-start;
+
+    button {
+      margin-left: auto;
+    }
+  }
+
+  .filter-container.type03 .left {
+    color: #212b36;
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
 
 /*---------------------------------------------------------------
@@ -1313,6 +1411,9 @@ footer .copylight {
   overflow-y: auto;
   height: 169px;
 }
+.tab-type01-wrap {
+  margin-top: 10px;
+}
 .tab-type01-wrap ul {
   display: flex;
   width: calc(100% - 65px);
@@ -1340,6 +1441,8 @@ footer .copylight {
 }
 .tab-type01-wrap li a {
   color: #fff;
+  font-size: 14px;
+  font-weight: 700;
 }
 .filter-container .filter-btn {
   display: flex;
@@ -1992,6 +2095,7 @@ button.filter-btn02.save {
 .title-type03 {
   color: var(--SubTxt2, #737c86);
   font-feature-settings: 'liga' off, 'clig' off;
+  border-bottom: 1px solid #a6a6a6;
 
   /* Subtitle1 */
   font-family: Pretendard;
@@ -2004,11 +2108,19 @@ button.filter-btn02.save {
   align-items: flex-start;
   margin: 10px 0;
   align-self: stretch;
+
+  &.mt-0 {
+    margin-top: 0;
+  }
 }
 
 .chart-container.type02 {
-  height: 200px;
-  margin: 5px 0 23px;
+  height: 220px;
+  margin: 10px 0 23px;
+
+  &.mb-0 {
+    margin-bottom: 0;
+  }
 }
 .devide2 {
   display: flex;
@@ -2025,12 +2137,32 @@ button.filter-btn02.save {
   margin-top: 0 !important;
 }
 
+/* 250823 추가 */
+.statistics.v2 {
+  main {
+    margin-top: 19px;
+  }
+
+  .chart-container {
+    height: 320px;
+
+    &:not(:first-child) {
+      margin-top: 38px;
+    }
+  }
+}
+
 /*---------------------------------------------------------------
   [증거 이력 검색 팝업 > 썸내일 요소 더블 클릭 시 확대된 이미지가 뷰포트 중앙에 오도록 고정하는 스타일]
 -----------------------------------------------------------------*/
 .thumnail-list-v2.enlarged-active {
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
+  height: 100%;
+}
+
+.thumnail-list-v2.enlarged-active ~ section {
+  display: none;
 }
 
 .thumnail-list-v2.enlarged-active .thumnail-item-expanded {
