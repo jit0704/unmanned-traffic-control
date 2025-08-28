@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        <section class="main-content statistics">
+        <section class="main-content statistics all">
           <div class="tab-type01-wrap">
             <ul>
               <li><a href="main2.html">지점통계</a></li>
@@ -71,7 +71,30 @@
             </div>
           </hgroup>
           <div class="content-wrap">
-            <div class="title-type02">
+            <div class="statistics-tbl">
+              <table>
+                <colgroup>
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>전체 / 평균 건수</th>
+                    <th>최다 / 최소 발생 시간</th>
+                    <th>최다 / 최소 발생 지점</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1,333,000건 / 1,333,000건</td>
+                    <td>8월 16일 (333,000건) / 8월 15일 (333,000건)</td>
+                    <td>A지점 (333,000건) / B지점 (333,000건)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- <div class="title-type02">
               <span class="sub-title">단속량 분석</span>
               <span class="sub-date">2025-07-01 ~ 2025-07-06</span>
             </div>
@@ -82,10 +105,10 @@
                 <li>위반 최다 지점: <span>1,000건 (c지점)</span></li>
                 <li>위반 최다 유형: <span>900건 (속도위반)</span></li>
               </ul>
-            </div>
+            </div> -->
             <main class="mgt-0 pr-0">
-              <article>
-                <div class="title-type03">시간대 별(일별, 월별) 지점 단속량</div>
+              <article class="statis-chart-container">
+                <div class="title-type03">지점 단속량</div>
                 <div class="chart-container type02">
                   <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
                 </div>
