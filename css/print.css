@@ -1,0 +1,143 @@
+/* A4 사이즈 정의 */
+@page {
+  size: A4; /* A4 용지 크기 */
+  margin: 5mm; /* 용지 여백 설정 */
+}
+
+body {
+  width: 210mm; /* A4 용지 너비 */
+  height: 297mm; /* A4 용지 높이 */
+  margin: 0 auto;
+  min-width: auto;
+  background-color: #fff;
+}
+
+.print-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 37.92px 22px 16px;
+
+  h1 {
+    line-height: 33px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 33.5px;
+    margin-bottom: 3.5px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .date {
+    margin-top: 14.48px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: #a3a6b9;
+  }
+
+  .chart-area {
+    border-radius: 5px;
+    border: 1px solid #b7bfc8;
+    background: #fff;
+  }
+
+  .state-increase {
+    color: #ff4848;
+  }
+
+  .state-decrease {
+    color: #487ebf;
+  }
+
+  .tbl-wrap {
+    margin: 11.6px 0 0 0;
+    border-top: 1px solid #b7bfc8;
+    border-bottom: 1px solid #b7bfc8;
+
+    th {
+      font-size: 11px;
+      font-weight: 700;
+      background: #f6f6f6;
+    }
+
+    td {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    th,
+    td {
+      height: 30px;
+      vertical-align: middle;
+      text-align: center;
+      border: 1px solid #b7bfc8;
+    }
+
+    &.type2 {
+      th {
+        font-weight: 500;
+        background: #f7fcff;
+      }
+
+      td {
+        font-size: 11px;
+        font-weight: 400;
+      }
+    }
+
+    &.type3 {
+      th {
+        font-weight: 500;
+        background: #f7fcff;
+      }
+
+      td {
+        font-size: 11px;
+        font-weight: 400;
+      }
+
+      th,
+      td {
+        height: 22.38px;
+      }
+
+      &.last {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #b7bfc8;
+      }
+    }
+  }
+
+  .horizontal-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 7.6px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #b7bfc8;
+
+    & > article {
+      flex: 1;
+
+      .chart-area {
+        height: 253px;
+      }
+    }
+  }
+}
+
+/* @media print {
+  .wrapper {
+    display: none;
+  }
+
+  .print-container {
+    display: block;
+  }
+} */
