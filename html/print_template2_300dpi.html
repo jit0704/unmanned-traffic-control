@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>프린트 템플릿2</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/print2.css" />
+  </head>
+  <body>
+    <div class="print-container">
+      <h1>단속량 분석 보고서</h1>
+      <p class="date">2025 08-01 ~ 2025 08-31</p>
+      <div class="tbl-wrap">
+        <table>
+          <colgroup>
+            <col style="width: 33.33%" />
+            <col style="width: 33.33%" />
+            <col style="width: 33.33%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>총 위반 건수</th>
+              <th>최다 발생 시간</th>
+              <th>최다 발생 지점</th>
+            </tr>
+            <tr>
+              <td>15,000건</td>
+              <td>16시 / 10,000건</td>
+              <td>A지점</td>
+            </tr>
+            <tr>
+              <th>평균 위반 건수</th>
+              <th>최소 발생 시간</th>
+              <th>최소 발생 지점</th>
+            </tr>
+            <tr>
+              <td>800건</td>
+              <td>06시 / 300건</td>
+              <td>B지점</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //tbl-wrap -->
+
+      <section>
+        <h2>지점 단속량</h2>
+        <div class="chart-area" style="height: 900px">차트 영역</div>
+      </section>
+
+      <section>
+        <h2>이동평균 대비 이상지점(7일 기준)</h2>
+        <div class="tbl-wrap type2">
+          <table>
+            <colgroup>
+              <col />
+              <col style="width: 180px" />
+              <col />
+              <col />
+              <col />
+              <col />
+              <col />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>날짜</th>
+                <th>지점</th>
+                <th>단속량</th>
+                <th>평소 단속량</th>
+                <th>상한기준</th>
+                <th>하한기준</th>
+                <th>증감율</th>
+                <th>이상 상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025. 08. 01</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td><span class="state-increase">이상 증가</span></td>
+              </tr>
+              <tr>
+                <td>2025. 08. 01</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td><span class="state-decrease">이상 감소</span></td>
+              </tr>
+              <tr>
+                <td>2025. 08. 01</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+                <td><span class="state-increase">이상 증가</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="horizontal-contents">
+        <article>
+          <h2>지점 별 유형 단속량</h2>
+          <div class="chart-area">차트 영역</div>
+        </article>
+        <article>
+          <h2>위반 유형 별 비율</h2>
+          <div class="chart-area">차트 영역</div>
+        </article>
+      </section>
+    </div>
+    <!-- //print-container -->
+  </body>
+</html>

@@ -1,0 +1,229 @@
+/* A4 사이즈 정의 */
+@page {
+  size: A4; /* A4 용지 크기 */
+  margin: 0; /* 용지 여백 설정 */
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  /* height: 3508px; */
+  margin: 0 auto;
+  min-width: auto;
+  background-color: #fff;
+}
+
+.print-container {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 135px 55px 50px;
+
+  h1 {
+    line-height: 108px;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 78px;
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .date {
+    margin-top: 65px;
+    text-align: right;
+    font-size: 40px;
+    font-weight: 700;
+    color: #a3a6b9;
+  }
+
+  .chart-area {
+    border-radius: 15px;
+    border: 1px solid #b7bfc8;
+    background: #fff;
+  }
+
+  .state-increase {
+    color: #ff4848;
+  }
+
+  .state-decrease {
+    color: #487ebf;
+  }
+
+  .tbl-wrap {
+    margin: 39px 0 0 0;
+    border-top: 1px solid #b7bfc8;
+    border-bottom: 1px solid #b7bfc8;
+
+    th {
+      font-size: 32px;
+      font-weight: 700;
+      background: #f6f6f6;
+    }
+
+    td {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    th,
+    td {
+      height: 100px;
+      vertical-align: middle;
+      text-align: center;
+      border: 1px solid #b7bfc8;
+    }
+
+    &.type2 {
+      th {
+        font-weight: 500;
+        background: #f7fcff;
+      }
+
+      td {
+        font-size: 32px;
+        font-weight: 400;
+      }
+    }
+
+    &.type3 {
+      th {
+        font-size: 28px;
+        font-weight: 500;
+        background: #f7fcff;
+      }
+
+      td {
+        font-size: 28px;
+        font-weight: 400;
+      }
+
+      th,
+      td {
+        height: 70px;
+      }
+
+      &.last {
+        padding-bottom: 50px;
+        border-bottom: 1px solid #b7bfc8;
+      }
+    }
+  }
+
+  .horizontal-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #b7bfc8;
+
+    & > article {
+      flex: 1;
+
+      .chart-area {
+        height: 790px;
+      }
+    }
+  }
+}
+
+/* @media print: 인쇄 시 적용될 스타일 */
+@media print {
+  body {
+    width: 210mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    background-color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-container {
+    padding: calc(135 * 0.08467mm) calc(55 * 0.08467mm) calc(50 * 0.08467mm) !important;
+    height: auto !important;
+  }
+
+  .print-container h1 {
+    font-size: 16.7pt !important;
+    line-height: calc(108 * 0.08467mm) !important;
+    font-weight: 700 !important;
+  }
+
+  .print-container h2 {
+    font-size: 12pt !important;
+    margin-top: calc(78 * 0.08467mm) !important;
+    margin-bottom: calc(10 * 0.08467mm) !important;
+    font-weight: 700 !important;
+  }
+
+  .print-container .date {
+    font-size: 10pt !important;
+    margin-top: calc(65 * 0.08467mm) !important;
+    font-weight: 700 !important;
+  }
+
+  .print-container .chart-area {
+    height: calc(790 * 0.08467mm) !important;
+  }
+
+  .print-container .tbl-wrap {
+    margin: calc(39 * 0.08467mm) 0 0 0 !important;
+  }
+
+  .print-container .tbl-wrap th {
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+  }
+
+  .print-container .tbl-wrap td {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+  }
+
+  .print-container .tbl-wrap th,
+  .print-container .tbl-wrap td {
+    height: calc(100 * 0.08467mm) !important;
+  }
+
+  .print-container .tbl-wrap.type2 th {
+    font-weight: 500 !important;
+  }
+
+  .print-container .tbl-wrap.type2 td {
+    font-size: 8pt !important;
+    font-weight: 400 !important;
+  }
+
+  .print-container .tbl-wrap.type3 th {
+    font-size: 7pt !important;
+    font-weight: 500 !important;
+  }
+
+  .print-container .tbl-wrap.type3 td {
+    font-size: 7pt !important;
+    font-weight: 400 !important;
+  }
+
+  .print-container .tbl-wrap.type3 th,
+  .print-container .tbl-wrap.type3 td {
+    height: calc(70 * 0.08467mm) !important;
+  }
+
+  .print-container .tbl-wrap.type3.last {
+    padding-bottom: calc(50 * 0.08467mm) !important;
+  }
+
+  .print-container .horizontal-contents {
+    gap: calc(50 * 0.08467mm) !important;
+    padding-bottom: calc(50 * 0.08467mm) !important;
+  }
+}
