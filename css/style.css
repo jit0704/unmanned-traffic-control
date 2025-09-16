@@ -910,7 +910,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
     }
 
     .content-wrap {
-      padding-top: 18px;
+      padding-top: 16px;
     }
 
     .title-type03 {
@@ -920,14 +920,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
     }
 
     .statis-chart-container {
-      margin-top: 28px;
-
       & > .title-type03 {
         padding-bottom: 10px;
       }
 
       & > .chart-container.type02 {
-        height: 230px;
+        height: 295px;
         margin: 9px 0 0 0;
       }
 
@@ -939,7 +937,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
         }
 
         .chart-container.type02 {
-          height: 230px;
+          height: 295px;
         }
       }
     }
@@ -1666,6 +1664,13 @@ footer .copylight {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
+.filter-container .left {
+  .result {
+    align-content: center;
+    font-size: 14px;
+    color: #737c86;
+  }
+}
 .filter-container .right .filter-btn-search {
   display: flex;
   width: 92px;
@@ -2319,6 +2324,10 @@ button.filter-btn02.save {
 
 /* 250823 추가 */
 .statistics.v2 {
+  .filter-container {
+    padding: 12px 32px;
+  }
+
   main {
     margin-top: 19px;
   }
