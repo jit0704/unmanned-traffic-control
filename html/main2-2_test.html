@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>전체 통계</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/util/ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+      .hidden-iframe {
+        display: none;
+        position: absolute;
+        width: 210mm;
+        height: 297mm;
+      }
+
+      /* 250916 style 추가 */
+      .is-pdf-create {
+        overflow: hidden;
+
+        .wrapper {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <span class="left">
+          <img src="/images/logo.png" alt="logo" />
+          <h1>무인교통단속장비 센터</h1>
+        </span>
+        <span class="right">
+          <em class="user">알티솔루션님</em>
+          <button type="button">로그아웃</button>
+        </span>
+      </header>
+      <main class="main-container">
+        <nav>
+          <a href="main.html" class="btn-crackdown">단속현황</a>
+          <a href="main2.html" class="btn-stats active">통계</a>
+          <a href="violation.html" class="btn-violate">위반이력</a>
+          <a href="setting1.html" class="btn-setting">설정</a>
+          <div class="lang-dropdown-container">
+            <button type="button" id="lang-button">
+              <img src="/images/lang_es.png" alt="스페인어" id="lang-image" />
+              <span id="lang-text">스페인어</span>
+            </button>
+            <div class="dropdown-list">
+              <a href="#" data-lang="스페인어" data-img="/images/lang_es.png">
+                <img src="/images/lang_es.png" alt="스페인어" />
+                <span>스페인어</span>
+              </a>
+              <a href="#" data-lang="영어" data-img="/images/lang_usa.png">
+                <img src="/images/lang_usa.png" alt="영어" />
+                <span>영어</span>
+              </a>
+              <a href="#" data-lang="한글" data-img="/images/lang_kor.png">
+                <img src="/images/lang_kor.png" alt="한글" />
+                <span>한글</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <section class="main-content statistics all">
+          <div class="tab-type01-wrap">
+            <ul>
+              <li><a href="main2.html">지점통계</a></li>
+              <li class="on"><a href="main2-2.html">전체통계</a></li>
+            </ul>
+          </div>
+          <!-- //tab-type01-wrap -->
+
+          <hgroup class="filter-container type02">
+            <div class="left">
+              <select class="selectbox" style="width: 146px">
+                <option value="">일별</option>
+                <option value="">아이템</option>
+              </select>
+              <input type="date" class="datebox" />
+              <input type="date" class="datebox" />
+              <button type="button" class="btn-primary">검색</button>
+            </div>
+            <div class="right">
+              <button type="button" class="filter-btn pdf" onclick="startReportGeneration('pdf')"></button>
+              <button type="button" class="filter-btn print"></button>
+            </div>
+          </hgroup>
+          <div class="content-wrap">
+            <div class="statistics-tbl">
+              <table>
+                <colgroup>
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>전체 / 평균 건수</th>
+                    <th>최다 / 최소 발생 시간</th>
+                    <th>최다 / 최소 발생 지점</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1,333,000건 / 1,333,000건</td>
+                    <td>8월 16일 (333,000건) / 8월 15일 (333,000건)</td>
+                    <td>A지점 (333,000건) / B지점 (333,000건)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- <div class="title-type02">
+              <span class="sub-title">단속량 분석</span>
+              <span class="sub-date">2025-07-01 ~ 2025-07-06</span>
+            </div>
+            <div class="items-list-wrap">
+              <ul class="items-list">
+                <li>총 위반 건수: <span>3,000건</span></li>
+                <li>평균 위반 건수: <span>500건</span></li>
+                <li>위반 최다 지점: <span>1,000건 (c지점)</span></li>
+                <li>위반 최다 유형: <span>900건 (속도위반)</span></li>
+              </ul>
+            </div> -->
+            <main class="mgt-0 pr-0">
+              <article class="statis-chart-container">
+                <div class="title-type03">지점 단속량</div>
+                <div class="chart-container type02">
+                  <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+                </div>
+                <div class="devide2">
+                  <div class="left">
+                    <div class="title-type03 mt-0">지점 별 유형 단속량</div>
+                    <div class="chart-container type02 mb-0">
+                      <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="title-type03 mt-0">위반 유형 별 비율</div>
+                    <div class="chart-container type02 mb-0">
+                      <!-- <img src="https://placehold.co/2000x325" alt="" /> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </main>
+          </div>
+        </section>
+      </main>
+      <!-- //main-container -->
+      <footer>
+        <p class="copylight">Copyright 2025, MOPTICON CO, LTD ALL rights reserved.</p>
+      </footer>
+    </div>
+    <!-- //wrapper -->
+
+    <iframe id="reportFrame" class="hidden-iframe"></iframe>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const reportFrame = document.getElementById('reportFrame');
+        const reportUrl = `/html/print_template.html`;
+        reportFrame.src = reportUrl;
+      });
+
+      function startReportGeneration(action) {
+        const reportFrame = document.getElementById('reportFrame');
+        // iframe에 보고서 페이지를 로드
+        const reportUrl = `/html/print_template.html`;
+
+        reportFrame.src = reportUrl;
+        generatePdfFromFrame(reportFrame);
+      }
+
+      // 250916 수정
+      // pdf 다운 버튼 클릭시 화면이 1초 정도 잠깐 깨짐.
+      // 이를 방지해주는 class명을 추가 및 삭제를 위해 generatePdfFromFrame 함수를 비동기 함수로 변경.
+      // async/await 키워드 추가
+      async function generatePdfFromFrame(iframe) {
+        console.log('PDF 생성을 시작합니다.');
+        // 캡처 대상을 body가 아닌 documentElement(<html>)로 변경하니까 정상적으로 css불러옴
+        const reportContent = iframe.contentWindow.document.documentElement;
+
+        // html2pdf 옵션 설정
+        const options = {
+          margin: -1,
+          filename: '단속량_분석_보고서.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        };
+
+        // iframe의 차트들이 이미지로 교체된 후
+        // DOM이 안정화될 시간을 벌어주기 위해 짧은 지연시간을 줌
+        // setTimeout(() => {
+        //   html2pdf().from(reportContent).set(options).save();
+        // }, 300);
+
+        await new Promise((resolve) => setTimeout(resolve, 300));
+
+        const bodyEl = document.querySelector('html, body');
+        bodyEl.classList.add('is-pdf-create');
+
+        try {
+          await html2pdf().from(reportContent).set(options).save();
+        } catch (error) {
+          console.error('PDF 생성 중 오류가 발생했습니다:', error);
+        } finally {
+          bodyEl.classList.remove('is-pdf-create');
+        }
+      }
+    </script>
+  </body>
+</html>
