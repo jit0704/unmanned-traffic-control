@@ -1266,6 +1266,24 @@ footer .copylight {
   border-top: 0;
 }
 
+.selectbox-with-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+
+  .selectbox {
+    width: 100px;
+    height: 40px;
+  }
+
+  .btn-primary {
+    width: auto;
+    min-width: 50px;
+  }
+}
+
 /*---------------------------------------------------------------
   [증거 이력 검색 팝업 style]
 -----------------------------------------------------------------*/
@@ -2197,7 +2215,7 @@ button.filter-btn02.save {
 .setting-cont-wrap > .right {
   width: calc(50% - 16.5px);
   overflow-y: auto;
-  height: 718px;
+  /* height: 718px; */
 }
 .title-btn-type {
   display: flex;
